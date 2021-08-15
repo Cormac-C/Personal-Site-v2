@@ -1,5 +1,5 @@
 import * as React from "react"
-
+import NavBar from "../components/navbar"
 // styles
 const pageStyles = {
     color: "#232129",
@@ -16,6 +16,7 @@ const ContactPage = () => {
     return (
       <main style={pageStyles}>
         <title>Contact | Cormac</title>
+        <NavBar/>
         <h1 style={headingStyles}>
           This is an contact page!
         </h1>

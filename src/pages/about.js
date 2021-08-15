@@ -1,4 +1,5 @@
 import * as React from "react"
+import NavBar from "../components/navbar"
 
 // styles
 const pageStyles = {
@@ -16,6 +17,7 @@ const AboutPage = () => {
     return (
       <main style={pageStyles}>
         <title>About | Cormac</title>
+        <NavBar/>
         <h1 style={headingStyles}>
           This is an about page!
         </h1>
