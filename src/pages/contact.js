@@ -1,23 +1,37 @@
 import * as React from "react";
+import { Container, Row, Col, Button } from "react-bootstrap";
 import NavBar from "../components/navbar";
-
-const pageStyles = {
-  color: "#232129",
-  padding: 96,
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-};
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-};
 
 const ContactPage = () => {
   return (
-    <main style={pageStyles}>
+    <main>
       <title>Contact | Cormac</title>
       <NavBar />
-      <h1 style={headingStyles}>This is an contact page!</h1>
+      <Container className="body">
+        <Row>
+          <h1> Contact </h1>
+        </Row>
+        <Row>
+          <p>
+            {" "}
+            Conversations are great. Please reach out if you’d like to discuss
+            opportunities for collaboration, ask a question about one of my
+            projects, or generally discuss something interesting happening in
+            the world.{" "}
+          </p>
+        </Row>
+        <Row>
+          <Col className="justify-content-center col-4" align="center">
+            <Button>Email</Button>
+          </Col>
+          <Col className="justify-content-center col-4" align="center">
+            <Button>Github</Button>
+          </Col>
+          <Col className="justify-content-center col-4" align="center">
+            <Button>Linkedin</Button>
+          </Col>
+        </Row>
+      </Container>
     </main>
   );
 };
