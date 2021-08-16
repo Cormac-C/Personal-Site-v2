@@ -1,28 +1,50 @@
-import * as React from "react"
-import NavBar from "../components/navbar"
-
-// styles
-const pageStyles = {
-    color: "#232129",
-    padding: 96,
-    fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-    marginTop: 0,
-    marginBottom: 64,
-    maxWidth: 320,
-}
+import * as React from "react";
+import { Container, Row } from "react-bootstrap";
+import NavBar from "../components/navbar";
+import "./about.css";
 
 const AboutPage = () => {
-    return (
-      <main style={pageStyles}>
-        <title>About | Cormac</title>
-        <NavBar/>
-        <h1 style={headingStyles}>
-          This is an about page!
-        </h1>
-      </main>
-    )
-  }
-  
-  export default AboutPage
+  return (
+    <main>
+      <title>About | Cormac</title>
+      <NavBar />
+      <Container className="body">
+        <Row>
+          <h1> About Me </h1>
+        </Row>
+        <Row>
+          <p>
+            {" "}
+            Systems Design Engineering at{" "}
+            <span className="bold">University of Waterloo</span>.{" "}
+          </p>
+          <p>
+            {" "}
+            Currently developing at <span className="bold">Xe.com</span>,
+            previously at <span className="bold">TD Payments Innovation</span>,{" "}
+            <span className="bold">360 Education Labs Inc</span>.{" "}
+          </p>
+          <p>
+            {" "}
+            I’m passionate about designing and building innovative, low-friction
+            solutions for users facing real-world problems. I look for
+            opportunities where I can move between the user-centered design of a
+            product and its implementation as a part of a dedicated team.{" "}
+          </p>
+          <p>
+            {" "}
+            In my free time I’m often running, playing guitar, or trying to
+            cheer the Leafs to victory.{" "}
+          </p>
+          <p>
+            {" "}
+            Seeking Coop opportunities for Winter 2022 (Jan - April). Please
+            don’t hesitate to reach out if you’d like to chat or join forces.{" "}
+          </p>
+        </Row>
+      </Container>
+    </main>
+  );
+};
+
+export default AboutPage;
