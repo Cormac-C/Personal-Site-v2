@@ -1,29 +1,29 @@
 .navbar {
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
-    font-size: 1.5rem !important;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  font-size: 1.5rem !important;
 }
 
 .navbar-brand {
-    color: #597EDE !important;
-    font-size: 3rem !important;
-    padding: 0 !important;
-    font-weight: 900;   
-}    
+  color: #597ede !important;
+  font-size: 3rem !important;
+  padding: 0 !important;
+  font-weight: 900;
+}
 
 .navbar nav {
-    margin-right: -2.5rem;
+  margin-right: -2.5rem;
 }
 
 .nav-link {
-    color: #000000 !important;
-    margin-left: 2.5rem;
-    margin-right: 2.5rem;
+  color: #000000 !important;
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
 }
 
 .btn-nav {
-    background-color: #597EDE !important;
-    color: #FFFFFF !important;
-    font-size: 1.5rem !important;
-    margin-left: 2.5rem;
-    margin-right: 2.5rem;
+  background-color: #597ede !important;
+  color: #ffffff !important;
+  font-size: 1.5rem !important;
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
 }
