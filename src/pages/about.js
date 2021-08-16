@@ -9,7 +9,7 @@ const AboutPage = () => {
       <title>About | Cormac</title>
       <NavBar />
       <Container className="body">
-        <Row>
+        <Row className="sectionTitle">
           <h1> About Me </h1>
         </Row>
         <Row>

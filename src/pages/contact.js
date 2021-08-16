@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import NavBar from "../components/navbar";
+import "./contact.css";
 
 const ContactPage = () => {
   return (
@@ -8,7 +9,7 @@ const ContactPage = () => {
       <title>Contact | Cormac</title>
       <NavBar />
       <Container className="body">
-        <Row>
+        <Row className="sectionTitle">
           <h1> Contact </h1>
         </Row>
         <Row>
