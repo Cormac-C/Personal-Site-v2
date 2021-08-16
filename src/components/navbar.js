@@ -8,7 +8,7 @@ export default class NavBar extends Component {
       <div>
         <Navbar collapseOnSelect bg="white" expand="md" fixed="top">
           <Container>
-            <NavbarBrand> CC </NavbarBrand>
+            <NavbarBrand href="/"> CC </NavbarBrand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse
               id="responsive-navbar-nav"
