@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Container, Row, Col, Button } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import NavBar from "../components/navbar";
 import { StaticImage } from "gatsby-plugin-image";
 import "./contact.css";
