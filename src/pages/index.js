@@ -12,13 +12,17 @@ const IndexPage = () => {
       <NavBar />
       <Container className="body">
         <Row className="align-items-center gy-5">
-          <Col className="col-6">
-            <h1> Cormac Cureton </h1>
-            <p> Learner | Designer | Developer </p>
-            <p> Seeking opportunities to make a positive impact and grow </p>
+          <Col className="col-8">
+            <div className="landingTitle">
+              <h1> Cormac Cureton </h1>
+            </div>
+            <div className="landingSubTitle">
+              <p> Learner | Designer | Developer </p>
+              <p> Seeking opportunities to make a positive impact and grow </p>
+            </div>
           </Col>
           <Col
-            className="justify-content-center align-center col-6"
+            className="justify-content-center align-center col-4"
             align="center"
           >
             <StaticImage
