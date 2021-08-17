@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import NavBar from "../components/navbar";
+import { StaticImage } from "gatsby-plugin-image";
 import "./contact.css";
 
 const ContactPage = () => {
@@ -23,13 +24,52 @@ const ContactPage = () => {
         </Row>
         <Row>
           <Col className="justify-content-center col-4" align="center">
-            <Button>Email</Button>
+            <a
+              href="mailto: cormaccureton@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <StaticImage
+                src="../images/email.svg"
+                alt="Email Icon"
+                placeholder="blurred"
+                layout="fixed"
+                width={100}
+                height={100}
+              />
+            </a>
           </Col>
           <Col className="justify-content-center col-4" align="center">
-            <Button>Github</Button>
+            <a
+              href="https://github.com/Cormac-C"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <StaticImage
+                src="../images/github.svg"
+                alt="Github Icon"
+                placeholder="blurred"
+                layout="fixed"
+                width={100}
+                height={100}
+              />
+            </a>
           </Col>
           <Col className="justify-content-center col-4" align="center">
-            <Button>Linkedin</Button>
+            <a
+              href="https://www.linkedin.com/in/cormaccureton"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <StaticImage
+                src="../images/linkedin.svg"
+                alt="Linkedin Icon"
+                placeholder="blurred"
+                layout="fixed"
+                width={100}
+                height={100}
+              />
+            </a>
           </Col>
         </Row>
       </Container>
