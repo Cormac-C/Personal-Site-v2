@@ -3,6 +3,7 @@
 .sectionTitle {
   width: min-content;
   white-space: nowrap;
+  margin-bottom: 1.5rem;
 }
 
 .sectionTitle :after {
@@ -23,7 +24,7 @@
   font-size: 1.5rem;
 }
 .body h1 {
-  font-size: calc(1.5rem + 1.5vw);
+  font-size: calc(1.75rem + 1.5vw);
 }
 .bold {
   font-weight: bold;
