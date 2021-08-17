@@ -13,7 +13,7 @@ const ContactPage = () => {
         <Row className="sectionTitle">
           <h1> Contact </h1>
         </Row>
-        <Row>
+        <Row className="mainText">
           <p>
             {" "}
             Conversations are great. Please reach out if you’d like to discuss

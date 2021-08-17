@@ -3,7 +3,7 @@
 .sectionTitle {
   width: min-content;
   white-space: nowrap;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .sectionTitle :after {
