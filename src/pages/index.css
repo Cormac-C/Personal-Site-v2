@@ -36,3 +36,11 @@
   border-color: #597ede;
   border-width: 3px;
 }
+
+.headshot {
+  margin-right: 20%;
+}
+
+.headshot img {
+  border-radius: 50%;
+}
