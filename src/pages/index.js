@@ -37,10 +37,12 @@ const IndexPage = () => {
             </div>
           </Col>
           <Col className="justify-content-center col-6" align="center">
-            <Button>View Projects</Button>
+            <Button href="/projects">View Projects</Button>
           </Col>
           <Col className="justify-content-center col-6" align="center">
-            <Button variant="outline-primary">About Me</Button>
+            <Button variant="outline-primary" href="/about">
+              About Me
+            </Button>
           </Col>
         </Row>
       </Container>
