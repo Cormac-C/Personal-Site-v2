@@ -10,14 +10,13 @@ export default class ProjectCard extends Component {
         <Card>
           <Row>
             <Col className="col-5 align-self-center" align="center">
-              <StaticImage
-                src="../images/icon.png"
-                alt="Headshot"
-                placeholder="blurred"
-                layout="fixed"
-                width={100}
-                height={100}
-              />
+              <div className="projectImage">
+                <StaticImage
+                  src="../images/icon.png"
+                  alt="Headshot"
+                  placeholder="blurred"
+                />
+              </div>
             </Col>
             <Col className="col-7">
               <Card.Title>Project Name</Card.Title>

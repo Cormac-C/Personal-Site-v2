@@ -16,3 +16,8 @@
   font-size: 1.25rem !important;
   color: black;
 }
+
+.projectImage {
+  max-width: 100%;
+  max-height: 100%;
+}
