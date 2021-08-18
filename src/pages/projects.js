@@ -2,6 +2,7 @@ import * as React from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import Footer from "../components/footer";
 import NavBar from "../components/navbar";
+import ProjectCard from "../components/projectCard";
 
 const ProjectsPage = () => {
   return (
@@ -14,6 +15,14 @@ const ProjectsPage = () => {
         </Row>
         <Row>
           <p> This page is under construction, check back in soon! </p>
+        </Row>
+        <Row>
+          <Col>
+            <ProjectCard />
+          </Col>
+          <Col>
+            <ProjectCard />
+          </Col>
         </Row>
         {/* <Row xs={1} md={2} className="g-4">
           {Array.from({ length: 4 }).map((_, idx) => (

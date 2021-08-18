@@ -1,0 +1,13 @@
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+.card-subtitle {
+  font-size: 1.25rem;
+}
+
+.card p {
+  font-size: 1.25rem !important;
+  color: black;
+}
