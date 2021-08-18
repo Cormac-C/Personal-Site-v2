@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+p {
+  color: #6b6b6b;
+}
+
+.body {
+  margin-top: 128px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.body p {
+  font-size: 1.5rem;
+}
+
+.body h1 {
+  font-size: calc(1.75rem + 1.5vw);
+}
+
+.body .btn {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  min-width: 220px;
+  border-radius: 5px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.landingTitle {
+  margin-bottom: 2rem;
+}
+
+.landingTitle h1 {
+  color: #597ede;
+  font-size: 4.5rem;
+}
+
+.landingSubTitle p {
+  color: #6b6b6b;
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+.btn-primary {
+  background-color: #597ede;
+  border-color: #597ede;
+}
+
+.btn-outline-primary {
+  color: #597ede;
+  border-color: #597ede;
+  border-width: 3px;
+}
+
+.headshot {
+  margin-right: 20%;
+}
+
+.headshot img {
+  border-radius: 50%;
+}
+
+.sectionTitle {
+  width: min-content;
+  white-space: nowrap;
+  margin-bottom: 2rem;
+}
+
+.sectionTitle :after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 8px;
+  border-radius: 8px;
+  background: #597ede;
+  left: 0;
+}
+
+.mainText {
+  margin-bottom: 3rem;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.footerText p {
+  font-size: 0.75rem;
+  margin-bottom: 0.5rem;
+}

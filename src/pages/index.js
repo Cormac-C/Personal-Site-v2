@@ -3,7 +3,7 @@ import NavBar from "../components/navbar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Col, Row, Button, Container } from "react-bootstrap";
 import { StaticImage } from "gatsby-plugin-image";
-import "./index.css";
+import "./format.css";
 import Footer from "../components/footer";
 
 const IndexPage = () => {
