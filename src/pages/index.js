@@ -11,7 +11,7 @@ const IndexPage = () => {
     <main>
       <title>Home | Cormac</title>
       <NavBar />
-      <Container className="body">
+      <Container className="landing body">
         <Row className="align-items-center gy-5">
           <Col className="col-7">
             <div className="landingTitle">

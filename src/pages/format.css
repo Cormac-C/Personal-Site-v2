@@ -26,6 +26,10 @@ p {
   border-radius: 5px;
 }
 
+.landing {
+  margin-top: max(128px, 15%);
+}
+
 .bold {
   font-weight: bold;
 }
