@@ -14,7 +14,20 @@ const ProjectsPage = () => {
           <h1> Projects </h1>
         </Row>
         <Row>
-          <p> This page is under construction, check back in soon! </p>
+          <Col>
+            <ProjectCard />
+          </Col>
+          <Col>
+            <ProjectCard />
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <ProjectCard />
+          </Col>
+          <Col>
+            <ProjectCard />
+          </Col>
         </Row>
         <Row>
           <Col>

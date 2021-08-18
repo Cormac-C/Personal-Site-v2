@@ -10,6 +10,7 @@
 .card {
   border-radius: 0.75rem;
   padding: 1rem;
+  margin-bottom: 3rem;
 }
 
 .card p {
