@@ -31,9 +31,6 @@ const IndexPage = () => {
                 src="../images/face.jpg"
                 alt="Headshot"
                 placeholder="blurred"
-                layout="fixed"
-                width={300}
-                height={300}
               />
             </div>
           </Col>
