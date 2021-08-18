@@ -12,7 +12,10 @@ const ProjectsPage = () => {
         <Row className="sectionTitle">
           <h1> Projects </h1>
         </Row>
-        <Row xs={1} md={2} className="g-4">
+        <Row>
+          <p> This page is under construction, check back in soon! </p>
+        </Row>
+        {/* <Row xs={1} md={2} className="g-4">
           {Array.from({ length: 4 }).map((_, idx) => (
             <Col>
               <Card>
@@ -28,7 +31,7 @@ const ProjectsPage = () => {
               </Card>
             </Col>
           ))}
-        </Row>
+        </Row> */}
       </Container>
       <Footer />
     </main>
