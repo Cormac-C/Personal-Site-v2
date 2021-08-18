@@ -9,17 +9,17 @@ export default class ProjectCard extends Component {
       <div>
         <Card>
           <Row>
-            <Col className="col-6 align-self-center" align="center">
+            <Col className="col-4 align-self-center" align="center">
               <StaticImage
                 src="../images/icon.png"
                 alt="Headshot"
                 placeholder="blurred"
                 layout="fixed"
-                width={150}
-                height={150}
+                width={100}
+                height={100}
               />
             </Col>
-            <Col className="col-6">
+            <Col className="col-8">
               <Card.Title>Project Name</Card.Title>
               <Card.Subtitle className="mb-2 text-muted">
                 Tech · Stack · Info

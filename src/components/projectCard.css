@@ -7,6 +7,11 @@
   font-size: 1.25rem;
 }
 
+.card {
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
+
 .card p {
   font-size: 1.25rem !important;
   color: black;
