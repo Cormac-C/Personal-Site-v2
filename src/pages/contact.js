@@ -3,6 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import NavBar from "../components/navbar";
 import { StaticImage } from "gatsby-plugin-image";
 import "./contact.css";
+import Footer from "../components/footer";
 
 const ContactPage = () => {
   return (
@@ -73,6 +74,7 @@ const ContactPage = () => {
           </Col>
         </Row>
       </Container>
+      <Footer />
     </main>
   );
 };

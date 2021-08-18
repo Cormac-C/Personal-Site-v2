@@ -1,5 +1,6 @@
 import * as React from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
+import Footer from "../components/footer";
 import NavBar from "../components/navbar";
 
 const ProjectsPage = () => {
@@ -29,6 +30,7 @@ const ProjectsPage = () => {
           ))}
         </Row>
       </Container>
+      <Footer />
     </main>
   );
 };

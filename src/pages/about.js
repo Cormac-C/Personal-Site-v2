@@ -1,5 +1,6 @@
 import * as React from "react";
 import { Container, Row } from "react-bootstrap";
+import Footer from "../components/footer";
 import NavBar from "../components/navbar";
 import "./about.css";
 
@@ -43,6 +44,7 @@ const AboutPage = () => {
           </p>
         </Row>
       </Container>
+      <Footer />
     </main>
   );
 };
