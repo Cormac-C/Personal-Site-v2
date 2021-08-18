@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Card, Container, Row, Col } from "react-bootstrap";
+import { Card, Row, Col } from "react-bootstrap";
 import "./projectCard.css";
 import { StaticImage } from "gatsby-plugin-image";
 
@@ -9,7 +9,7 @@ export default class ProjectCard extends Component {
       <div>
         <Card>
           <Row>
-            <Col className="col-4 align-self-center" align="center">
+            <Col className="col-5 align-self-center" align="center">
               <StaticImage
                 src="../images/icon.png"
                 alt="Headshot"
@@ -19,7 +19,7 @@ export default class ProjectCard extends Component {
                 height={100}
               />
             </Col>
-            <Col className="col-8">
+            <Col className="col-7">
               <Card.Title>Project Name</Card.Title>
               <Card.Subtitle className="mb-2 text-muted">
                 Tech · Stack · Info
