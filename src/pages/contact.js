@@ -1,9 +1,9 @@
 import * as React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import NavBar from "../components/navbar";
+import Footer from "../components/footer";
 import { StaticImage } from "gatsby-plugin-image";
 import "./contact.css";
-import Footer from "../components/footer";
 
 const ContactPage = () => {
   return (

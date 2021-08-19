@@ -1,8 +1,8 @@
 import * as React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import Footer from "../components/footer";
 import NavBar from "../components/navbar";
 import ProjectCard from "../components/projectCard";
+import Footer from "../components/footer";
 
 const ProjectsPage = () => {
   return (
