@@ -4,7 +4,6 @@ module.exports = {
     title: "Personal-Website-v2",
   },
   plugins: [
-    "gatsby-plugin-postcss",
     "gatsby-plugin-gatsby-cloud",
     "gatsby-plugin-image",
     {
