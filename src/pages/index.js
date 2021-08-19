@@ -4,7 +4,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Col, Row, Button, Container } from "react-bootstrap";
 import { StaticImage } from "gatsby-plugin-image";
 import "./format.css";
-import Footer from "../components/footer";
 
 const IndexPage = () => {
   return (
@@ -44,7 +43,6 @@ const IndexPage = () => {
           </Col>
         </Row>
       </Container>
-      <Footer />
     </main>
   );
 };
