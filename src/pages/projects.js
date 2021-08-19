@@ -14,14 +14,25 @@ const ProjectsPage = () => {
           <h1> Projects </h1>
         </Row>
         <Row>
-          <p> This page is under construction, check back in soon! </p>
-        </Row>
-        <Row>
           <Col>
-            <ProjectCard />
+            <ProjectCard
+              project={{
+                title: "Project Name",
+                subtitle: "Tech · Stack · Info",
+                description: "This is a brief description of the project",
+                imagesrc: "../images/icon.png",
+              }}
+            />
           </Col>
           <Col>
-            <ProjectCard />
+            <ProjectCard
+              project={{
+                title: "Project Name",
+                subtitle: "Tech · Stack · Info",
+                description: "This is a brief description of the project",
+                imagesrc: "../images/icon.png",
+              }}
+            />
           </Col>
         </Row>
       </Container>

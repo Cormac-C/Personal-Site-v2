@@ -9,22 +9,21 @@ export default class ProjectCard extends Component {
       <div>
         <Card>
           <Row>
-            <Col className="col-5 align-self-center" align="center">
-              <StaticImage
-                src="../images/icon.png"
-                alt="Headshot"
-                placeholder="blurred"
-                layout="fixed"
-                width={100}
-                height={100}
-              />
+            <Col className="col-4 align-self-center" align="center">
+              <div className="projectImage">
+                <StaticImage
+                  src="../images/icon.png"
+                  alt={this.props.project.title}
+                  placeholder="blurred"
+                />
+              </div>
             </Col>
-            <Col className="col-7">
-              <Card.Title>Project Name</Card.Title>
+            <Col className="col-8 align-self-center">
+              <Card.Title>{this.props.project.title}</Card.Title>
               <Card.Subtitle className="mb-2 text-muted">
-                Tech · Stack · Info
+                {this.props.project.subtitle}
               </Card.Subtitle>
-              <Card.Text>This is a brief description of the project</Card.Text>
+              <Card.Text>{this.props.project.description}</Card.Text>
             </Col>
           </Row>
         </Card>
