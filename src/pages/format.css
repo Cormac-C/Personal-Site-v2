@@ -88,3 +88,7 @@ p {
 .mainText {
   margin-bottom: 3rem;
 }
+
+.buttonIcon {
+  margin: 3px;
+}
