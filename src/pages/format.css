@@ -7,6 +7,7 @@ p {
 .body {
   margin-top: 128px;
   font-family: "Open Sans", sans-serif;
+  min-height: calc(100vh - 128px - 1rem);
 }
 
 .body p {
@@ -86,16 +87,4 @@ p {
 
 .mainText {
   margin-bottom: 3rem;
-}
-
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-}
-
-.footerText p {
-  font-size: 0.75rem;
-  margin-bottom: 0.5rem;
 }
