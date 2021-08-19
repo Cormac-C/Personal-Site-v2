@@ -33,12 +33,34 @@ const IndexPage = () => {
               />
             </div>
           </Col>
-          <Col className="justify-content-center col-6" align="center">
-            <Button href="/projects">View Projects</Button>
+          <Col className="col-6" align="center">
+            <Button href="/projects">
+              <div className="d-flex flex-row justify-content-around">
+                <StaticImage
+                  className="buttonIcon"
+                  src="../images/codeIcon.svg"
+                  alt="Code Icon"
+                  placeholder="blurred"
+                  layout="fixed"
+                  height={30}
+                />
+                <span>View Projects</span>
+              </div>
+            </Button>
           </Col>
-          <Col className="justify-content-center col-6" align="center">
+          <Col className="col-6" align="center">
             <Button variant="outline-primary" href="/about">
-              About Me
+              <div className="d-flex flex-row justify-content-around">
+                <StaticImage
+                  className="buttonIcon"
+                  src="../images/profileIcon.svg"
+                  alt="Profile Icon"
+                  placeholder="blurred"
+                  layout="fixed"
+                  height={30}
+                />
+                <span>About Me</span>
+              </div>
             </Button>
           </Col>
         </Row>
