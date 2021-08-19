@@ -18,7 +18,7 @@ export default class ProjectCard extends Component {
                 />
               </div>
             </Col>
-            <Col className="col-8 ">
+            <Col className="col-8 align-self-center">
               <Card.Title>{this.props.project.title}</Card.Title>
               <Card.Subtitle className="mb-2 text-muted">
                 {this.props.project.subtitle}
