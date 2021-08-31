@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
+    siteUrl: "https://cormaccureton.gatsbyjs.io/",
     title: "Personal-Website-v2",
   },
   plugins: [
@@ -9,7 +9,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {
-        trackingId: "G-MJRVV6J2LE",
+        trackingId: "G-L13ESNC9DW",
       },
     },
     "gatsby-plugin-sitemap",
