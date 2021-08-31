@@ -24,6 +24,7 @@ const ProjectsPage = ({ data }) => {
                   subtitle: node.frontmatter.tech,
                   description: node.frontmatter.blurb,
                   imagesrc: "../images/icon.png",
+                  link: node.frontmatter.slug,
                 }}
               />
             </Col>
@@ -42,6 +43,7 @@ export const query = graphql`
           title
           tech
           blurb
+          slug
         }
         id
         body
