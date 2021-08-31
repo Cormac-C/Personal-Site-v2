@@ -14,7 +14,7 @@ const ProjectsPage = ({ data }) => {
         <Row className="sectionTitle">
           <h1> Projects </h1>
         </Row>
-        <Row>
+        <Row xs={1} md={2} className="g-4">
           {data.allMdx.nodes.map((node) => (
             <Col>
               <ProjectCard
