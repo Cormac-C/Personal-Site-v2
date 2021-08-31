@@ -25,10 +25,16 @@ p {
   padding-bottom: 16px;
   min-width: 220px;
   border-radius: 5px;
+  margin-top: 2%;
+  margin-bottom: 2%;
 }
 
 .landing {
   margin-top: max(128px, 10%);
+}
+
+.topMargin {
+  margin-top: 5%;
 }
 
 .bold {
@@ -62,8 +68,17 @@ p {
   border-width: 3px;
 }
 
-.headshot {
-  margin-right: 20%;
+@media (min-width: 768px) {
+  .headshot {
+    margin-right: 20%;
+  }
+}
+
+@media (max-width: 768px) {
+  .headshot {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
 }
 
 .headshot img {

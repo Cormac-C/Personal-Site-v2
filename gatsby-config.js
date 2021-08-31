@@ -23,5 +23,13 @@ module.exports = {
       },
       __key: "images",
     },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "projects",
+        path: "./src/projects/",
+      },
+    },
+    "gatsby-plugin-mdx",
   ],
 };
