@@ -16,7 +16,7 @@ const ProjectsPage = ({ data }) => {
         </Row>
         <Row xs={1} md={2} className="g-4">
           {data.allMdx.nodes.map((node) => (
-            <Col>
+            <Col key={node.id}>
               <ProjectCard
                 key={node.id}
                 project={{
