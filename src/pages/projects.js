@@ -22,7 +22,7 @@ const ProjectsPage = ({ data }) => {
                 project={{
                   title: node.frontmatter.title,
                   subtitle: node.frontmatter.tech,
-                  description: "This is a brief description of the project",
+                  description: node.frontmatter.blurb,
                   imagesrc: "../images/icon.png",
                 }}
               />
@@ -41,6 +41,7 @@ export const query = graphql`
         frontmatter {
           title
           tech
+          blurb
         }
         id
         body
