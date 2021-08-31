@@ -10,9 +10,9 @@ const IndexPage = () => {
     <main>
       <title>Home | Cormac</title>
       <NavBar />
-      <Container className="landing body">
-        <Row className="align-items-center gy-5">
-          <Col className="col-7">
+      <Container className="landing body gy-4">
+        <Row xs={1} md={2} className="align-items-center gy-5">
+          <Col md={7}>
             <div className="landingTitle">
               <h1> Cormac Cureton </h1>
             </div>
@@ -22,7 +22,8 @@ const IndexPage = () => {
             </div>
           </Col>
           <Col
-            className="justify-content-center align-center col-5"
+            md={5}
+            className="justify-content-center align-center"
             align="center"
           >
             <div className="headshot">
@@ -33,7 +34,9 @@ const IndexPage = () => {
               />
             </div>
           </Col>
-          <Col className="col-6" align="center">
+        </Row>
+        <Row xs={1} md={2} className="topMargin">
+          <Col align="center">
             <Button href="/projects">
               <div className="d-flex flex-row justify-content-around">
                 <StaticImage
@@ -48,7 +51,7 @@ const IndexPage = () => {
               </div>
             </Button>
           </Col>
-          <Col className="col-6" align="center">
+          <Col align="center">
             <Button variant="outline-primary" href="/about">
               <div className="d-flex flex-row justify-content-around">
                 <StaticImage
