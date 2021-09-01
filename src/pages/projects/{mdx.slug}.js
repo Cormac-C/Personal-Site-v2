@@ -17,7 +17,9 @@ const Project = ({ data }) => {
           <h1> {data.mdx.frontmatter.title} </h1>
         </Row>
         <Row>
-          <GatsbyImage image={image} alt={data.mdx.frontmatter.title} />
+          <Container>
+            <GatsbyImage image={image} alt={data.mdx.frontmatter.title} />
+          </Container>
         </Row>
         <Row className="mainText">
           <MDXRenderer>{data.mdx.body}</MDXRenderer>
