@@ -23,7 +23,7 @@ const ProjectsPage = ({ data }) => {
                   title: node.frontmatter.title,
                   subtitle: node.frontmatter.tech,
                   description: node.frontmatter.blurb,
-                  imagesrc: "../images/icon.png",
+                  image: node.frontmatter.hero_image,
                   link: node.frontmatter.slug,
                 }}
               />
@@ -44,6 +44,12 @@ export const query = graphql`
           tech
           blurb
           slug
+          hero_image {
+            childrenImageSharp {
+              gatsbyImageData
+            }
+          }
+          hero_image_alt
         }
         id
         body
