@@ -14,7 +14,7 @@ const ProjectsPage = ({ data }) => {
         <Row className="sectionTitle">
           <h1> Projects </h1>
         </Row>
-        <Row xs={1} md={2} className="g-4">
+        <Row xs={1} md={1} lg={2} className="g-4">
           {data.allMdx.nodes.map((node) => (
             <Col key={node.id}>
               <ProjectCard
@@ -23,7 +23,7 @@ const ProjectsPage = ({ data }) => {
                   title: node.frontmatter.title,
                   subtitle: node.frontmatter.tech,
                   description: node.frontmatter.blurb,
-                  imagesrc: "../images/icon.png",
+                  image: node.frontmatter.hero_image,
                   link: node.frontmatter.slug,
                 }}
               />
@@ -44,6 +44,12 @@ export const query = graphql`
           tech
           blurb
           slug
+          hero_image {
+            childrenImageSharp {
+              gatsbyImageData(height: 180, layout: CONSTRAINED)
+            }
+          }
+          hero_image_alt
         }
         id
         body
