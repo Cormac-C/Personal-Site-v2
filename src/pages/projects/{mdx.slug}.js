@@ -4,8 +4,10 @@ import { Container, Row } from "react-bootstrap";
 import NavBar from "../../components/navbar";
 import Footer from "../../components/footer";
 import { MDXRenderer } from "gatsby-plugin-mdx";
+import { getImage, GatsbyImage } from "gatsby-plugin-image";
 
 const Project = ({ data }) => {
+  const image = getImage(data.mdx.frontmatter.hero_image.childrenImageSharp[0]);
   return (
     <main>
       <title>Project | Cormac</title>
@@ -13,6 +15,9 @@ const Project = ({ data }) => {
       <Container className="body">
         <Row className="sectionTitle">
           <h1> {data.mdx.frontmatter.title} </h1>
+        </Row>
+        <Row>
+          <GatsbyImage image={image} alt={data.mdx.frontmatter.title} />
         </Row>
         <Row className="mainText">
           <MDXRenderer>{data.mdx.body}</MDXRenderer>
@@ -31,6 +36,12 @@ export const query = graphql`
         tech
         blurb
         slug
+        hero_image {
+          childrenImageSharp {
+            gatsbyImageData
+          }
+        }
+        hero_image_alt
       }
       id
       body
