@@ -46,7 +46,7 @@ export const query = graphql`
           slug
           hero_image {
             childrenImageSharp {
-              gatsbyImageData
+              gatsbyImageData(height: 180, layout: CONSTRAINED)
             }
           }
           hero_image_alt
