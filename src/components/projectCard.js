@@ -7,9 +7,7 @@ import { getImage, GatsbyImage } from "gatsby-plugin-image";
 export default class ProjectCard extends Component {
   constructor(props) {
     super(props);
-    console.log(props.project.image.childrenImageSharp[0]);
     this.image = getImage(props.project.image.childrenImageSharp[0]);
-    console.log(this.image);
   }
   render() {
     return (
