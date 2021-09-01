@@ -16,8 +16,8 @@ export default class ProjectCard extends Component {
       <div>
         <Link to={this.props.project.link}>
           <Card>
-            <Row>
-              <Col className="col-4 align-self-center" align="center">
+            <Row xs={1} md={2}>
+              <Col className="align-self-center" align="center">
                 <div className="projectImage">
                   <GatsbyImage
                     image={this.image}
@@ -25,7 +25,7 @@ export default class ProjectCard extends Component {
                   />
                 </div>
               </Col>
-              <Col className="col-8 align-self-center">
+              <Col className="align-self-center">
                 <Card.Title>{this.props.project.title}</Card.Title>
 
                 <Card.Subtitle className="mb-2 text-muted">
