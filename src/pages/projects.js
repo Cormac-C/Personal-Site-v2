@@ -37,7 +37,10 @@ const ProjectsPage = ({ data }) => {
 };
 export const query = graphql`
   query {
-    allMdx {
+    allMdx(
+      sort: { order: DESC, fields: frontmatter___endDate }
+      filter: { frontmatter: { hide: { eq: "false" } } }
+    ) {
       nodes {
         frontmatter {
           title
@@ -50,6 +53,8 @@ export const query = graphql`
             }
           }
           hero_image_alt
+          endDate
+          hide
         }
         id
         body
