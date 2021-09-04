@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://cormaccureton.com/",
+    siteUrl: "https://cormaccureton.gatsbyjs.io/",
     title: "Personal-Website-v2",
   },
   plugins: [
