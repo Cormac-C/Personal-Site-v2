@@ -20,8 +20,9 @@ const AboutPage = () => {
           </p>
           <p>
             {" "}
-            Currently developing at <span className="bold">Xe.com</span>,
-            previously at <span className="bold">TD Payments Innovation</span>,{" "}
+            Prviously at <span className="bold">Scispot.io</span>,{" "}
+            <span className="bold">Xe.com</span>, previously at{" "}
+            <span className="bold">TD Payments Innovation</span>,{" "}
             <span className="bold">360 Education Labs Inc</span>.{" "}
           </p>
           <p>
@@ -38,8 +39,9 @@ const AboutPage = () => {
           </p>
           <p>
             {" "}
-            Seeking Coop opportunities for Winter 2022 (Jan - April). Please
-            don’t hesitate to reach out if you’d like to chat or join forces.{" "}
+            Seeking Coop opportunities for Winter and Summer 2023 (Jan - Aug).
+            Please don’t hesitate to reach out if you’d like to chat or join
+            forces.{" "}
           </p>
         </Row>
       </Container>
