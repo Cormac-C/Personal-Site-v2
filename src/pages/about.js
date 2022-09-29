@@ -20,9 +20,9 @@ const AboutPage = () => {
           </p>
           <p>
             {" "}
-            Prviously at <span className="bold">Scispot.io</span>,{" "}
-            <span className="bold">Xe.com</span>, previously at{" "}
-            <span className="bold">TD Payments Innovation</span>,{" "}
+            Previously at <span className="bold">Scispot.io</span>,{" "}
+            <span className="bold">Xe.com</span>,{" "}
+            <span className="bold">TD Payments Innovation</span>, and{" "}
             <span className="bold">360 Education Labs Inc</span>.{" "}
           </p>
           <p>
