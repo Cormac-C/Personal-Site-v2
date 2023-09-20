@@ -8,7 +8,7 @@ export default class Footer extends Component {
       <div className="footer">
         <Container>
           <Row className="footerText justify-content-md-center">
-            <p>Built by Cormac Cureton 2021</p>
+            <p>Built by Cormac Cureton 2023</p>
           </Row>
         </Container>
       </div>
