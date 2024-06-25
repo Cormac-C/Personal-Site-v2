@@ -14,13 +14,7 @@ const ContactPage = () => {
           <h1> Contact </h1>
         </Row>
         <Row className="mainText">
-          <p>
-            {" "}
-            Conversations are great. Please reach out if you’d like to discuss
-            opportunities for collaboration, ask a question about one of my
-            projects, or generally discuss something interesting happening in
-            the world.{" "}
-          </p>
+          <p> Don't hesitate to reach out </p>
         </Row>
         <Row>
           <Col className="justify-content-center col-4" align="center">
