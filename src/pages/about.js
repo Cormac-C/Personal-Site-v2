@@ -38,11 +38,7 @@ const AboutPage = () => {
             In my free time I’m often running, playing guitar, or trying to
             cheer the Leafs to victory.{" "}
           </p>
-          <p>
-            {" "}
-            Seeking new grad opportunities in 2024. Please don’t hesitate to
-            reach out if you’d like to chat or join forces.{" "}
-          </p>
+          <p> Please don’t hesitate to reach out if you’d like to chat. </p>
         </Row>
       </Container>
       <Footer />

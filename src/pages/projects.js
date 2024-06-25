@@ -24,7 +24,7 @@ const ProjectsPage = ({ data }) => {
                   subtitle: node.frontmatter.tech,
                   description: node.frontmatter.blurb,
                   image: node.frontmatter.hero_image,
-                  link: node.frontmatter.slug,
+                  link: node.frontmatter.slug
                 }}
               />
             </Col>
@@ -38,7 +38,7 @@ const ProjectsPage = ({ data }) => {
 export const query = graphql`
   query {
     allMdx(
-      sort: { order: DESC, fields: frontmatter___endDate }
+      sort: { frontmatter: { endDate: DESC } }
       filter: { frontmatter: { hide: { eq: "false" } } }
     ) {
       nodes {
