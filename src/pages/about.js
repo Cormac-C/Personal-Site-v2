@@ -29,51 +29,59 @@ const AboutPage = () => {
           <p> Alum of Systems Design Engineering at University of Waterloo.</p>
           <p>
             {" "}
-            Previously at:{" "}
-            <a
-              className="bold"
-              href="https://www.valencelabs.com/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Valence Labs
-            </a>
-            ,{" "}
-            <a
-              className="bold"
-              href="https://www.scispot.com/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Scispot
-            </a>
-            ,{" "}
-            <a
-              className="bold"
-              href="https://www.xe.com/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Xe
-            </a>
-            ,{" "}
-            <a
-              className="bold"
-              href="https://www.td.com/ca/en/commercial-banking"
-              target="_blank"
-              rel="noreferrer"
-            >
-              TD Payments Innovation
-            </a>
-            ,{" "}
-            <a
-              className="bold"
-              href="https://www.yuja.com/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              360 Education Labs Inc
-            </a>
+            Previously at
+            <ul>
+              <li>
+                <a
+                  className="bold"
+                  href="https://www.valencelabs.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Valence Labs
+                </a>
+              </li>
+              <li>
+                <a
+                  className="bold"
+                  href="https://www.scispot.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Scispot
+                </a>
+              </li>
+              <li>
+                <a
+                  className="bold"
+                  href="https://www.xe.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Xe
+                </a>
+              </li>
+              <li>
+                <a
+                  className="bold"
+                  href="https://www.td.com/ca/en/commercial-banking"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  TD Payments Innovation
+                </a>
+              </li>
+              <li>
+                <a
+                  className="bold"
+                  href="https://www.yuja.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  360 Education Labs Inc
+                </a>
+              </li>
+            </ul>
           </p>
           <p>
             {" "}
