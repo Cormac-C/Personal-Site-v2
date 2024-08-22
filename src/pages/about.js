@@ -15,30 +15,80 @@ const AboutPage = () => {
         <Row>
           <p>
             {" "}
-            Systems Design Engineering at{" "}
-            <span className="bold">University of Waterloo</span>.{" "}
+            M.Sc. Student in the{" "}
+            <a
+              className="bold"
+              href="https://ismart.ece.mcgill.ca/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              iSMART Lab
+            </a>{" "}
+            under the supervision of Prof. Narges Armanfard at McGill.
+          </p>
+          <p> Alum of Systems Design Engineering at University of Waterloo.</p>
+          <p>
+            {" "}
+            Previously at
+            <ul>
+              <li>
+                <a
+                  className="bold"
+                  href="https://www.valencelabs.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Valence Labs
+                </a>
+              </li>
+              <li>
+                <a
+                  className="bold"
+                  href="https://www.scispot.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Scispot
+                </a>
+              </li>
+              <li>
+                <a
+                  className="bold"
+                  href="https://www.xe.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Xe
+                </a>
+              </li>
+              <li>
+                <a
+                  className="bold"
+                  href="https://www.td.com/ca/en/commercial-banking"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  TD Payments Innovation
+                </a>
+              </li>
+              <li>
+                <a
+                  className="bold"
+                  href="https://www.yuja.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  360 Education Labs Inc
+                </a>
+              </li>
+            </ul>
           </p>
           <p>
             {" "}
-            Previously at <span className="bold">Valence Discovery</span>,{" "}
-            <span className="bold">Scispot.io</span>,{" "}
-            <span className="bold">Xe.com</span>,{" "}
-            <span className="bold">TD Payments Innovation</span>, and{" "}
-            <span className="bold">360 Education Labs Inc</span>.{" "}
-          </p>
-          <p>
-            {" "}
-            I’m passionate about designing and building innovative, low-friction
-            solutions for users facing real-world problems. I look for
-            opportunities where I can move between the user-centered design of a
-            product and its implementation as a part of a dedicated team.{" "}
-          </p>
-          <p>
-            {" "}
-            In my free time I’m often running, playing guitar, or trying to
+            In my free time I'm often running, playing guitar, or trying to
             cheer the Leafs to victory.{" "}
           </p>
-          <p> Please don’t hesitate to reach out if you’d like to chat. </p>
+          <p> Please don't hesitate to reach out if you'd like to chat. </p>
         </Row>
       </Container>
       <Footer />
