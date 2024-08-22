@@ -85,10 +85,10 @@ const AboutPage = () => {
           </p>
           <p>
             {" "}
-            In my free time I’m often running, playing guitar, or trying to
+            In my free time I'm often running, playing guitar, or trying to
             cheer the Leafs to victory.{" "}
           </p>
-          <p> Please don’t hesitate to reach out if you’d like to chat. </p>
+          <p> Please don't hesitate to reach out if you'd like to chat. </p>
         </Row>
       </Container>
       <Footer />
