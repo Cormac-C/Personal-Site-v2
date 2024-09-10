@@ -17,7 +17,9 @@ const IndexPage = () => {
               <h1> Cormac Cureton </h1>
             </div>
             <div className="landingSubTitle">
-              <p> AI Researcher | Engineer </p>
+              <p>
+                <a href="/lite">AI Researcher</a>| Engineer{" "}
+              </p>
             </div>
           </Col>
           <Col

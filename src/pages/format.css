@@ -56,7 +56,7 @@ p {
   font-size: 4.5rem;
 }
 
-.landingSubTitle p {
+.landingSubTitle p a {
   color: #6b6b6b;
   font-size: 1.5rem;
   font-weight: bolder;
