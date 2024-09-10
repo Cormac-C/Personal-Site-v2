@@ -1,6 +1,6 @@
 import * as React from "react";
 import NavBar from "../components/navbar";
-import { Col, Row, Button, Container, FormCheck } from "react-bootstrap";
+import { Col, Row, Button, Container } from "react-bootstrap";
 import { StaticImage } from "gatsby-plugin-image";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./format.css";
@@ -17,7 +17,9 @@ const IndexPage = () => {
               <h1> Cormac Cureton </h1>
             </div>
             <div className="landingSubTitle">
-              <p> AI Researcher | Engineer </p>
+              <p>
+                <a href="/lite">AI Researcher</a>| Engineer{" "}
+              </p>
             </div>
           </Col>
           <Col
@@ -64,18 +66,6 @@ const IndexPage = () => {
                 <span>About Me</span>
               </div>
             </Button>
-          </Col>
-        </Row>
-        <Row xs={1} className="topMargin">
-          <Col>
-            <FormCheck
-              type="switch"
-              label="Dev Mode"
-              defaultChecked="true"
-              onChange={() => {
-                window.location.href = "/lite";
-              }}
-            />
           </Col>
         </Row>
       </Container>
