@@ -34,7 +34,7 @@ const IndexPage = () => {
             </div>
           </Col>
         </Row>
-        <Row xs={1} md={2} className="topMargin">
+        <Row xs={1} md={3} className="topMargin">
           <Col align="center">
             <Button href="/projects">
               <div className="d-flex flex-row justify-content-around">
@@ -47,6 +47,13 @@ const IndexPage = () => {
                   height={30}
                 />
                 <span>View Projects</span>
+              </div>
+            </Button>
+          </Col>
+          <Col align="center">
+            <Button variant="outline-primary" href="/lite">
+              <div className="d-flex flex-row justify-content-around">
+                <span>Research Site</span>
               </div>
             </Button>
           </Col>
