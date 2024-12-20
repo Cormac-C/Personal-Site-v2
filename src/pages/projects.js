@@ -1,6 +1,6 @@
 import * as React from "react";
 import { graphql } from "gatsby";
-import { Container, Row, Col, Alert } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import { Seo } from "../components/seo";
 import NavBar from "../components/navbar";
 import ProjectCard from "../components/projectCard";
@@ -15,14 +15,6 @@ const ProjectsPage = ({ data }) => {
         <Row className="sectionTitle">
           <h1> Projects </h1>
         </Row>
-        <Alert variant={"info"}>
-          These projects were created between 2019 and 2023 as I was learning to
-          become a software developer. While they don't all meet the level of
-          quality I would expect from myself today, they still hold value as a
-          record of my learning process over time. I'm excited to add new
-          projects that showcase my current skills and interests in the near
-          future.
-        </Alert>
         <Row xs={1} md={1} lg={2} className="g-4">
           {data.allMdx.nodes.map((node) => (
             <Col key={node.id}>
