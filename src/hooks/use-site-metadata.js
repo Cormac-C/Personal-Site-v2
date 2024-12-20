@@ -5,9 +5,10 @@ export const useSiteMetadata = () => {
     query {
       site {
         siteMetadata {
+          siteUrl
           title
           description
-          siteUrl
+          image
         }
       }
     }
