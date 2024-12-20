@@ -6,14 +6,16 @@ export const Seo = ({ title, description, pathname, children }) => {
     title: defaultTitle,
     description: defaultDescription,
     image,
-    siteUrl
+    siteUrl,
+    googleVerification
   } = useSiteMetadata();
 
   const seo = {
     title: title || defaultTitle,
     description: description || defaultDescription,
     image: `${siteUrl}${image}`,
-    url: `${siteUrl}${pathname || ``}`
+    url: `${siteUrl}${pathname || ``}`,
+    googleVerification: googleVerification
   };
 
   return (
@@ -25,6 +27,7 @@ export const Seo = ({ title, description, pathname, children }) => {
       <meta name="twitter:url" content={seo.url} />
       <meta name="twitter:description" content={seo.description} />
       <meta name="twitter:image" content={seo.image} />
+      <meta name="google-site-verification" content={seo.googleVerification} />
       <link
         rel="icon"
         href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90' fill='white'>ⓒ</text></svg>"
