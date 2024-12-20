@@ -18,7 +18,7 @@ const IndexPage = () => {
             </div>
             <div className="landingSubTitle">
               <p>
-                <a href="/lite">AI Researcher</a>| Engineer{" "}
+                <a href="/lite">AI Researcher</a> | Engineer{" "}
               </p>
             </div>
           </Col>

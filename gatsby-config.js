@@ -1,16 +1,11 @@
 module.exports = {
   siteMetadata: {
     siteUrl: "https://cormaccureton.com",
-    title: "Personal-Website-v2"
+    title: "Personal-Website-v2",
+    description: "Cormac Cureton's Portfolio Website"
   },
   plugins: [
     "gatsby-plugin-image",
-    {
-      resolve: "gatsby-plugin-google-analytics",
-      options: {
-        trackingId: "G-9Y2ZJEF8PP"
-      }
-    },
     "gatsby-plugin-sitemap",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
@@ -26,7 +21,6 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "projects",
-        // path: "./src/projects/",
         path: `${__dirname}/src/projects`
       }
     },
