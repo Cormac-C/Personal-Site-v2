@@ -4,7 +4,7 @@ module.exports = {
     title: "Cormac Cureton",
     description: "Cormac Cureton's Portfolio Website",
     image: "./src/images/face.jpg",
-    googleVerification: "JrzlbvVlsQ6o7Hg0HCTkCo3ZmCvToir_rn_QTJP7tS4"
+    googleVerification: "JXDBhz7fjKEE2NLgIWp7yKitnjmTtKsEDRbOfc9jL7M"
   },
   plugins: [
     "gatsby-plugin-image",
