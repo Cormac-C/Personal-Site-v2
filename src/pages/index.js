@@ -1,5 +1,6 @@
 import * as React from "react";
 import NavBar from "../components/navbar";
+import { Seo } from "../components/seo";
 import { Col, Row, Button, Container } from "react-bootstrap";
 import { StaticImage } from "gatsby-plugin-image";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -74,3 +75,5 @@ const IndexPage = () => {
 };
 
 export default IndexPage;
+
+export const Head = () => <Seo />;
