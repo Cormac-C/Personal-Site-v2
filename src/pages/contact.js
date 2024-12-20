@@ -2,6 +2,7 @@ import * as React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import NavBar from "../components/navbar";
 import Footer from "../components/footer";
+import { Seo } from "../components/seo";
 import { StaticImage } from "gatsby-plugin-image";
 
 const ContactPage = () => {
@@ -73,3 +74,5 @@ const ContactPage = () => {
 };
 
 export default ContactPage;
+
+export const Head = () => <Seo />;

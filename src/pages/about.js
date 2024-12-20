@@ -2,6 +2,7 @@ import * as React from "react";
 import { Container, Row } from "react-bootstrap";
 import NavBar from "../components/navbar";
 import Footer from "../components/footer";
+import { Seo } from "../components/seo";
 
 const AboutPage = () => {
   return (
@@ -97,3 +98,5 @@ const AboutPage = () => {
 };
 
 export default AboutPage;
+
+export const Head = () => <Seo />;

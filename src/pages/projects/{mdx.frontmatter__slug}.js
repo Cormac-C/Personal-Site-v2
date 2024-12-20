@@ -3,6 +3,7 @@ import { graphql } from "gatsby"; // highlight-line
 import { Container, Row } from "react-bootstrap";
 import NavBar from "../../components/navbar";
 import Footer from "../../components/footer";
+import { Seo } from "../../components/seo";
 import { getImage, GatsbyImage } from "gatsby-plugin-image";
 
 const Project = ({ data, children }) => {
@@ -51,3 +52,5 @@ export const query = graphql`
 `;
 
 export default Project;
+
+export const Head = () => <Seo />;

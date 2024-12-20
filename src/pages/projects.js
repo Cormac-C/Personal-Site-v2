@@ -1,6 +1,7 @@
 import * as React from "react";
 import { graphql } from "gatsby";
 import { Container, Row, Col, Alert } from "react-bootstrap";
+import { Seo } from "../components/seo";
 import NavBar from "../components/navbar";
 import ProjectCard from "../components/projectCard";
 import Footer from "../components/footer";
@@ -72,3 +73,5 @@ export const query = graphql`
 `;
 
 export default ProjectsPage;
+
+export const Head = () => <Seo />;
