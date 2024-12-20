@@ -33,7 +33,8 @@ const ProjectsPage = ({ data }) => {
                   subtitle: node.frontmatter.tech,
                   description: node.frontmatter.blurb,
                   image: node.frontmatter.hero_image,
-                  link: node.frontmatter.slug
+                  link: node.frontmatter.slug,
+                  endDate: node.frontmatter.endDate
                 }}
               />
             </Col>
@@ -56,6 +57,7 @@ export const query = graphql`
           tech
           blurb
           slug
+          endDate
           hero_image {
             childrenImageSharp {
               gatsbyImageData(height: 180, layout: CONSTRAINED)

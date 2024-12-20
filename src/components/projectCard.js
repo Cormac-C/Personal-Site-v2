@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import { Card, Row, Col } from "react-bootstrap";
+import { Card, Row, Col, Badge } from "react-bootstrap";
 import "./projectCard.css";
 import { Link } from "gatsby";
 import { getImage, GatsbyImage } from "gatsby-plugin-image";
+import { isProjectOutdated } from "../utils";
 
 export default class ProjectCard extends Component {
   constructor(props) {
@@ -10,6 +11,7 @@ export default class ProjectCard extends Component {
     this.image = getImage(props.project.image.childrenImageSharp[0]);
   }
   render() {
+    const outOfDate = isProjectOutdated(this.props.project.endDate);
     return (
       <div>
         <Link to={this.props.project.link}>
@@ -27,6 +29,11 @@ export default class ProjectCard extends Component {
                 <Card.Title>{this.props.project.title}</Card.Title>
 
                 <Card.Subtitle className="mb-2 text-muted">
+                  {outOfDate && (
+                    <Badge pill bg="secondary" className="m-0.5">
+                      🕒 Old
+                    </Badge>
+                  )}{" "}
                   {this.props.project.subtitle}
                 </Card.Subtitle>
                 <Card.Text>{this.props.project.description}</Card.Text>
