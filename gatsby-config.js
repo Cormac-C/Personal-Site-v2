@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
     siteUrl: "https://cormaccureton.com",
-    title: "Personal-Website-v2",
-    description: "Cormac Cureton's Portfolio Website"
+    title: "Cormac Cureton",
+    description: "Cormac Cureton's Portfolio Website",
+    image: "./src/images/face.jpg"
   },
   plugins: [
     "gatsby-plugin-image",
