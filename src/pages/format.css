@@ -1,12 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
-
 p {
   color: #6b6b6b;
 }
 
 .body {
   margin-top: 128px;
-  font-family: "Open Sans", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
   min-height: calc(100vh - 128px - 1rem);
 }
 
@@ -25,7 +24,7 @@ p {
 
 .body .btn {
   font-size: 1.5rem;
-  font-weight: bolder;
+  font-weight: normal;
   padding-top: 16px;
   padding-bottom: 16px;
   min-width: 220px;
@@ -43,7 +42,7 @@ p {
 }
 
 .bold {
-  font-weight: bold;
+  font-weight: 500;
   color: #545454;
 }
 
