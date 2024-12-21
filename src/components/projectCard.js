@@ -15,7 +15,7 @@ export default class ProjectCard extends Component {
     return (
       <div>
         <Link to={this.props.project.link}>
-          <Card>
+          <Card className="projectCard">
             <Row xs={1} md={2}>
               <Col className="align-self-center" align="center">
                 <div className="projectImage">

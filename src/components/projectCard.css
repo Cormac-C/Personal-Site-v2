@@ -23,6 +23,14 @@
   max-height: 100%;
 }
 
+.projectCard {
+  @media (min-width: 768px) {
+    min-height: 16rem;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+  }
+}
+
 a {
   color: black;
   text-decoration: none;
