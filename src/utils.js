@@ -6,6 +6,7 @@ export const isProjectOutdated = (endDate) => {
 
 export const getColorSchemePreference = () => {
   if (
+    typeof window !== "undefined" &&
     window.matchMedia &&
     window.matchMedia("(prefers-color-scheme: dark)").matches
   ) {
