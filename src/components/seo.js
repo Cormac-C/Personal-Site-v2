@@ -1,5 +1,6 @@
 import React from "react";
 import { useSiteMetadata } from "../hooks/use-site-metadata";
+import { getColorSchemePreference } from "../utils";
 
 export const Seo = ({ title, description, pathname, children }) => {
   const {
@@ -18,6 +19,14 @@ export const Seo = ({ title, description, pathname, children }) => {
     googleVerification: googleVerification
   };
 
+  const createThemedIconHref = (char = "ⓒ") => {
+    const colorScheme = getColorSchemePreference();
+    console.log(colorScheme);
+    return `data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90' fill='${
+      colorScheme === "dark" ? "white" : "black"
+    }'>${char}</text></svg>`;
+  };
+
   return (
     <>
       <title>{seo.title}</title>
@@ -28,10 +37,7 @@ export const Seo = ({ title, description, pathname, children }) => {
       <meta name="twitter:description" content={seo.description} />
       <meta name="twitter:image" content={seo.image} />
       <meta name="google-site-verification" content={seo.googleVerification} />
-      <link
-        rel="icon"
-        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90' fill='white'>ⓒ</text></svg>"
-      />
+      <link rel="icon" href={createThemedIconHref("ⓒ")} />
       {children}
     </>
   );
