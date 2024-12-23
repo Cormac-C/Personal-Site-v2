@@ -1,7 +1,7 @@
-import * as React from "react";
+import React from "react";
 import { Container, Row } from "react-bootstrap";
 
-const Footer = () => {
+const Footer: React.FC = () => {
   return (
     <div className="w-full h-4 text-center">
       <Container>

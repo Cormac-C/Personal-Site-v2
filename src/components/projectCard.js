@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { Card, Row, Col, Badge } from "react-bootstrap";
-import "./projectCard.css";
 import { Link } from "gatsby";
 import { getImage, GatsbyImage } from "gatsby-plugin-image";
 import { isProjectOutdated } from "../utils";
+import "./projectCard.css";
 
 export default class ProjectCard extends Component {
   constructor(props) {
