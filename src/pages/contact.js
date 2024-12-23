@@ -27,7 +27,8 @@ const ContactPage = () => {
               <StaticImage
                 src="../images/email.svg"
                 alt="Email Icon"
-                placeholder="blurred"
+                placeholder="dominantColor"
+                loading="eager"
                 layout="fixed"
                 width={100}
                 height={100}
@@ -43,7 +44,8 @@ const ContactPage = () => {
               <StaticImage
                 src="../images/github.svg"
                 alt="Github Icon"
-                placeholder="blurred"
+                placeholder="dominantColor"
+                loading="eager"
                 layout="fixed"
                 width={100}
                 height={100}
@@ -59,7 +61,8 @@ const ContactPage = () => {
               <StaticImage
                 src="../images/linkedin.svg"
                 alt="Linkedin Icon"
-                placeholder="blurred"
+                placeholder="dominantColor"
+                loading="eager"
                 layout="fixed"
                 width={100}
                 height={100}
