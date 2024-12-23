@@ -27,5 +27,8 @@ module.exports = {
       }
     },
     "gatsby-plugin-mdx"
-  ]
+  ],
+  flags: {
+    DEV_SSR: true
+  }
 };
