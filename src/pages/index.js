@@ -39,7 +39,10 @@ const IndexPage = () => {
         </Row>
         <Row xs={1} md={2} className="topMargin">
           <Col align="center">
-            <Button href="/projects">
+            <Button
+              href="/projects"
+              className="bg-theme-blue hover:bg-theme-blue-accent"
+            >
               <div className="d-flex flex-row justify-content-around">
                 <StaticImage
                   className="buttonIcon"
@@ -54,7 +57,7 @@ const IndexPage = () => {
             </Button>
           </Col>
           <Col align="center">
-            <Button variant="outline-primary" href="/about">
+            <Button variant="outline-primary " href="/about">
               <div className="d-flex flex-row justify-content-around">
                 <StaticImage
                   className="buttonIcon"
