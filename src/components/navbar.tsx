@@ -14,7 +14,7 @@ const NavBar: React.FC = () => {
         <Container>
           <NavbarBrand
             href="/"
-            className="text-theme-blue hover:text-theme-blue-accent text-5xl leading-[4.5rem] p-0 font-black"
+            className="!text-theme-blue hover:!text-theme-blue-accent !text-5xl !leading-[4.5rem] p-0 font-black"
           >
             CC
           </NavbarBrand>
@@ -28,7 +28,7 @@ const NavBar: React.FC = () => {
                 Projects
               </Nav.Link>
               <Button
-                className="bg-theme-blue hover:bg-theme-blue-accent text-white hover:text-black text-2xl mx-10"
+                className="!bg-theme-blue hover:!bg-theme-blue-accent text-white !text-2xl mx-10"
                 variant="nav"
                 href="/contact"
               >
