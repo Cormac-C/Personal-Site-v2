@@ -5,6 +5,17 @@ import Footer from "../components/footer";
 import { Seo } from "../components/seo";
 
 const AboutPage: React.FC = () => {
+  const experiences = [
+    { name: "Valence Labs", link: "https://www.valencelabs.com/" },
+    { name: "Scispot", link: "https://www.scispot.com/" },
+    { name: "Xe", link: "https://www.xe.com/" },
+    {
+      name: "TD Payments Innovation",
+      link: "https://www.td.com/ca/en/commercial-banking"
+    },
+    { name: "360 Education Labs Inc", link: "https://www.yuja.com/" }
+  ];
+
   return (
     <main>
       <title>About | Cormac</title>
@@ -19,7 +30,7 @@ const AboutPage: React.FC = () => {
         <Row>
           <p className="text-xl">
             {" "}
-            M.Sc. Student in the{" "}
+            Currently, M.Sc. Student in the{" "}
             <a
               className="font-medium no-underline text-gray-600"
               href="https://ismart.ece.mcgill.ca/"
@@ -36,66 +47,26 @@ const AboutPage: React.FC = () => {
           </p>
           <p className="text-xl"> Previously at</p>
           <ul className="list-disc list-inside text-xl">
-            {/* TODO: look at moving to a map */}
-            <li key="valence-labs">
-              <a
-                className="font-medium no-underline text-gray-600"
-                href="https://www.valencelabs.com/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Valence Labs
-              </a>
-            </li>
-            <li key="scispot">
-              <a
-                className="font-medium no-underline text-gray-600"
-                href="https://www.scispot.com/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Scispot
-              </a>
-            </li>
-            <li key="xe">
-              <a
-                className="font-medium no-underline text-gray-600"
-                href="https://www.xe.com/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Xe
-              </a>
-            </li>
-            <li key="td-payments-innovation">
-              <a
-                className="font-medium no-underline text-gray-600"
-                href="https://www.td.com/ca/en/commercial-banking"
-                target="_blank"
-                rel="noreferrer"
-              >
-                TD Payments Innovation
-              </a>
-            </li>
-            <li key="360-education-labs">
-              <a
-                className="font-medium no-underline text-gray-600"
-                href="https://www.yuja.com/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                360 Education Labs Inc
-              </a>
-            </li>
+            {experiences.map((experience) => (
+              <li key={experience.name}>
+                <a
+                  className="font-medium no-underline text-gray-600"
+                  href={experience.link}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {experience.name}
+                </a>
+              </li>
+            ))}
           </ul>
           <p className="text-xl">
-            {" "}
             In my free time I'm often running, playing guitar, or trying to
-            cheer the Leafs to victory.{" "}
+            cheer the Leafs to victory.
           </p>
           <p className="text-xl">
-            {" "}
-            Please don't hesitate to reach out if you'd like to chat.{" "}
+            I'm on the lookout for big, interesting problems in AI. If you'd
+            like to collaborate, please reach out.
           </p>
         </Row>
       </Container>
