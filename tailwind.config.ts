@@ -8,10 +8,12 @@ module.exports = {
     extend: {
       colors: {
         "theme-blue": "#597ede",
-        "theme-blue-accent": "#4160b0"
+        "theme-blue-accent": "#4160b0",
+        "theme-blue-light": "#cdd8f5"
       },
       spacing: {
-        "body-min": "calc(100vh - 128px - 1rem)"
+        "body-min": "calc(100vh - 128px - 1rem)",
+        "max-margin": "max(128px, 10%)"
       }
     }
   },
