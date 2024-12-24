@@ -10,7 +10,7 @@ const AboutPage: React.FC = () => {
       <title>About | Cormac</title>
       <NavBar />
       <Container className="mt-32 min-h-body-min">
-        <Row className="w-min whitespace-nowrap mb-8 ">
+        <Row className="w-min whitespace-nowrap mb-8">
           <h1 className="font-[calc(1.75rem+1.5vw)] after:content-[''] after:block after:w-full after:h-2 after:bg-theme-blue after:left-0 after:rounded-lg">
             {" "}
             About Me{" "}
