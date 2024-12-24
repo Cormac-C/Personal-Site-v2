@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import { graphql } from "gatsby"; // highlight-line
 import { Container, Row, Alert } from "react-bootstrap";
 import NavBar from "../../components/navbar";
@@ -7,8 +7,10 @@ import { Seo } from "../../components/seo";
 import { isProjectOutdated } from "../../utils";
 import { getImage, GatsbyImage } from "gatsby-plugin-image";
 
-const Project = ({ data, children }) => {
-  const image = getImage(data.mdx.frontmatter.hero_image.childrenImageSharp[0]);
+const Project: React.FC = ({ data, children }: any) => {
+  const image = getImage(
+    data.mdx.frontmatter.hero_image.childrenImageSharp[0]
+  )!;
 
   const endDate = data.mdx.frontmatter.endDate;
   const outOfDate = isProjectOutdated(endDate);
@@ -17,9 +19,12 @@ const Project = ({ data, children }) => {
     <main>
       <title>Project | Cormac</title>
       <NavBar />
-      <Container className="body">
-        <Row className="sectionTitle">
-          <h1> {data.mdx.frontmatter.title} </h1>
+      <Container className="mt-32 min-h-body-min">
+        <Row className="w-min whitespace-nowrap mb-8">
+          <h1 className="font-[calc(1.75rem+1.5vw)] after:content-[''] after:block after:w-full after:h-2 after:bg-theme-blue after:left-0 after:rounded-lg">
+            {" "}
+            {data.mdx.frontmatter.title}{" "}
+          </h1>
         </Row>
         <Row>
           <Container>
@@ -27,14 +32,14 @@ const Project = ({ data, children }) => {
           </Container>
         </Row>
         {outOfDate && (
-          <Row>
+          <Row className="my-4">
             <Alert variant={"warning"}>
               FYI: This project was last updated on {endDate}. It may be out of
               date so take it with a grain of salt.
             </Alert>
           </Row>
         )}
-        <Row className="mainText">{children}</Row>
+        <Row className="mb-12">{children}</Row>
       </Container>
       <Footer />
     </main>

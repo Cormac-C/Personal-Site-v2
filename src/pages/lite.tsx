@@ -1,6 +1,6 @@
-import * as React from "react";
+import React from "react";
 
-const LitePage = () => {
+const LitePage: React.FC = () => {
   return (
     <div
       style={{
@@ -22,7 +22,7 @@ const LitePage = () => {
         under the supervision of Prof. Narges Armanfard at McGill.
       </p>
       <p> Alum of Systems Design Engineering at University of Waterloo.</p>
-      <p>
+      <div>
         Previously at
         <ul>
           <li>
@@ -50,7 +50,7 @@ const LitePage = () => {
             </a>
           </li>
         </ul>
-      </p>
+      </div>
       <h2>Publications</h2>
       <p>Coming Soon...</p>
       <h2>Contact</h2>

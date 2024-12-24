@@ -2,7 +2,19 @@ import React from "react";
 import { useSiteMetadata } from "../hooks/use-site-metadata";
 import { getColorSchemePreference } from "../utils";
 
-export const Seo = ({ title, description, pathname, children }) => {
+interface SeoProps {
+  title?: string;
+  description?: string;
+  pathname?: string;
+  children?: React.ReactNode;
+}
+
+export const Seo: React.FC<SeoProps> = ({
+  title,
+  description,
+  pathname,
+  children
+}: SeoProps) => {
   const {
     title: defaultTitle,
     description: defaultDescription,
@@ -19,7 +31,7 @@ export const Seo = ({ title, description, pathname, children }) => {
     googleVerification: googleVerification
   };
 
-  const createThemedIconHref = (char = "ⓒ") => {
+  const createThemedIconHref = (char: string = "ⓒ"): string => {
     const colorScheme = getColorSchemePreference();
     console.log(colorScheme);
     return `data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90' fill='${
