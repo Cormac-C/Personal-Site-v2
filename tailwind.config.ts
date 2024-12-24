@@ -9,6 +9,9 @@ module.exports = {
       colors: {
         "theme-blue": "#597ede",
         "theme-blue-accent": "#4160b0"
+      },
+      spacing: {
+        "body-min": "calc(100vh - 128px - 1rem)"
       }
     }
   },
