@@ -21,7 +21,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
     <div>
       <Link to={project.link} className="!no-underline">
-        <Card className="rounded-xl p-4 mb-12 md:min-h-56 md:pt-8 md:pb-4">
+        <Card className="rounded-xl p-4 mb-12 md:min-h-56 md:pt-8 md:pb-4 hover:shadow-md">
           <Row xs={1} md={2}>
             <Col className="self-center" align="center">
               <div className="w-full h-full">
@@ -40,8 +40,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                 )}{" "}
                 {project.subtitle}
               </Card.Subtitle>
-              <Card.Text>
-                <p className="!text-xl text-black">{project.description}</p>
+              <Card.Text className="!text-xl text-black">
+                {project.description}
               </Card.Text>
             </Col>
           </Row>

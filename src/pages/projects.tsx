@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import { graphql } from "gatsby";
 import { Container, Row, Col } from "react-bootstrap";
 import { Seo } from "../components/seo";
@@ -6,17 +6,20 @@ import NavBar from "../components/navbar";
 import ProjectCard from "../components/projectCard";
 import Footer from "../components/footer";
 
-const ProjectsPage = ({ data }) => {
+const ProjectsPage: React.FC = ({ data }: any) => {
   return (
     <main>
       <title>Projects | Cormac</title>
       <NavBar />
-      <Container className="body">
-        <Row className="sectionTitle">
-          <h1> Projects </h1>
+      <Container className="mt-32 min-h-body-min">
+        <Row className="w-min whitespace-nowrap mb-8">
+          <h1 className="font-[calc(1.75rem+1.5vw)] after:content-[''] after:block after:w-full after:h-2 after:bg-theme-blue after:left-0 after:rounded-lg">
+            {" "}
+            Projects{" "}
+          </h1>
         </Row>
         <Row xs={1} md={1} lg={2} className="g-4">
-          {data.allMdx.nodes.map((node) => (
+          {data.allMdx.nodes.map((node: any) => (
             <Col key={node.id}>
               <ProjectCard
                 key={node.id}
