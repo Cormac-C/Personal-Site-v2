@@ -33,7 +33,6 @@ export const Seo: React.FC<SeoProps> = ({
 
   const createThemedIconHref = (char: string = "ⓒ"): string => {
     const colorScheme = getColorSchemePreference();
-    console.log(colorScheme);
     return `data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90' fill='${
       colorScheme === "dark" ? "white" : "black"
     }'>${char}</text></svg>`;
