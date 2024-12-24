@@ -15,7 +15,7 @@ interface ProjectCardProps {
   };
 }
 
-const ProjectCard = ({ project }: ProjectCardProps) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   const image = getImage(project.image.childrenImageSharp[0])!;
   const outdated = isProjectOutdated(project.endDate);
   return (
