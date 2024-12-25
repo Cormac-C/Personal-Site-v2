@@ -19,9 +19,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   const image = getImage(project.image.childrenImageSharp[0])!;
   const outdated = isProjectOutdated(project.endDate);
   return (
-    <div>
-      <Link to={project.link} className="!no-underline">
-        <Card className="rounded-xl p-4 mb-12 md:min-h-56 md:pt-8 md:pb-4 hover:shadow-md">
+    <div className="md:h-full">
+      <Link to={project.link} className="!no-underline md:h-full md:block">
+        <Card className="rounded-xl px-4 py-auto mb-12 md:min-h-56 md:pt-8 md:pb-4 hover:shadow-md  md:!h-[calc(100%-32px)]">
           <Row xs={1} md={2}>
             <Col className="self-center" align="center">
               <div className="w-full h-full">
