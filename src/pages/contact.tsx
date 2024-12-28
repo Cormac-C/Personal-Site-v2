@@ -4,7 +4,7 @@ import NavBar from "../components/navbar";
 import Footer from "../components/footer";
 import { Seo } from "../components/seo";
 import { StaticImage } from "gatsby-plugin-image";
-import ContactButton from "../components/copyButton";
+import ContactButton from "../components/contactButton";
 
 const ContactPage: React.FC = () => {
   return (
@@ -18,11 +18,11 @@ const ContactPage: React.FC = () => {
             Contact{" "}
           </h1>
         </Row>
-        <Row className="mb-12">
+        <Row className="md:mb-12">
           <p className="text-xl"> Don't hesitate to reach out </p>
         </Row>
         <Row>
-          <Col className="justify-center col-4" align="center">
+          <Col className="justify-center" align="center" md={4} xs={12}>
             <StaticImage
               src="../images/email.svg"
               alt="Email Icon"
@@ -37,7 +37,7 @@ const ContactPage: React.FC = () => {
               email="cormaccureton@gmail.com"
             />
           </Col>
-          <Col className="justify-center col-4" align="center">
+          <Col className="justify-center" align="center" md={4} xs={12}>
             <StaticImage
               src="../images/github.svg"
               alt="Github Icon"
@@ -49,7 +49,7 @@ const ContactPage: React.FC = () => {
             />
             <ContactButton text="Cormac-C" link="https://github.com/Cormac-C" />
           </Col>
-          <Col className="justify-center col-4" align="center">
+          <Col className="justify-center" align="center" md={4} xs={12}>
             <StaticImage
               src="../images/linkedin.svg"
               alt="Linkedin Icon"
