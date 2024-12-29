@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Clipboard, Check, ExternalLink, Mail } from "lucide-react";
+import { motion } from "motion/react";
 
 const ContactButton = ({
   text,
@@ -21,22 +22,39 @@ const ContactButton = ({
       <p className="my-0 text-gray-700">{text} </p>
       <div className="flex flex-row space-x-2">
         {email && (
-          <a href={`mailto:${email}`} target="_blank" rel="noopener noreferrer">
+          <motion.a
+            href={`mailto:${email}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
             <Mail className="text-gray-700 hover:text-black" />
-          </a>
+          </motion.a>
         )}
         {link && (
-          <a href={link} target="_blank" rel="noopener noreferrer">
+          <motion.a
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
             <ExternalLink className="text-gray-700 hover:text-black" />
-          </a>
+          </motion.a>
         )}
-        <button onClick={copyText} aria-label="Copy to clipboard">
+        <motion.button
+          onClick={copyText}
+          aria-label="Copy to clipboard"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+        >
           {isCopied ? (
             <Check />
           ) : (
             <Clipboard className="text-gray-700 hover:text-black" />
           )}
-        </button>
+        </motion.button>
       </div>
     </div>
   );

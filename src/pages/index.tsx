@@ -4,6 +4,7 @@ import { Seo } from "../components/seo";
 import { Col, Row, Button, Container } from "react-bootstrap";
 import { StaticImage } from "gatsby-plugin-image";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { motion } from "motion/react";
 
 const IndexPage: React.FC = () => {
   return (
@@ -38,41 +39,45 @@ const IndexPage: React.FC = () => {
         </Row>
         <Row xs={1} md={2} className="!mt-[5%]">
           <Col align="center">
-            <Button
-              href="/projects"
-              className="!bg-theme-blue hover:!bg-theme-blue-accent !text-2xl py-3 my-1 rounded-md min-w-48"
-            >
-              <div className="d-flex flex-row justify-content-around">
-                <StaticImage
-                  className="m-1"
-                  src="../images/codeIcon.svg"
-                  alt="Code Icon"
-                  placeholder="blurred"
-                  layout="fixed"
-                  height={30}
-                />
-                <span>View Projects</span>
-              </div>
-            </Button>
+            <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+              <Button
+                href="/projects"
+                className="!bg-theme-blue hover:!bg-theme-blue-accent !text-2xl py-3 my-1 rounded-md min-w-48"
+              >
+                <div className="d-flex flex-row justify-content-around">
+                  <StaticImage
+                    className="m-1"
+                    src="../images/codeIcon.svg"
+                    alt="Code Icon"
+                    placeholder="blurred"
+                    layout="fixed"
+                    height={30}
+                  />
+                  <span>View Projects</span>
+                </div>
+              </Button>
+            </motion.div>
           </Col>
           <Col align="center">
-            <Button
-              variant="outline-primary"
-              className="hover:!bg-theme-blue-light !text-2xl py-3 my-1 rounded-md min-w-48"
-              href="/about"
-            >
-              <div className="d-flex flex-row justify-content-around">
-                <StaticImage
-                  className="m-1"
-                  src="../images/profileIcon.svg"
-                  alt="Profile Icon"
-                  placeholder="blurred"
-                  layout="fixed"
-                  height={30}
-                />
-                <span className="text-theme-blue">About Me</span>
-              </div>
-            </Button>
+            <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+              <Button
+                variant="outline-primary"
+                className="hover:!bg-theme-blue-light !text-2xl py-3 my-1 rounded-md min-w-48"
+                href="/about"
+              >
+                <div className="d-flex flex-row justify-content-around">
+                  <StaticImage
+                    className="m-1"
+                    src="../images/profileIcon.svg"
+                    alt="Profile Icon"
+                    placeholder="blurred"
+                    layout="fixed"
+                    height={30}
+                  />
+                  <span className="text-theme-blue">About Me</span>
+                </div>
+              </Button>
+            </motion.div>
           </Col>
         </Row>
       </Container>
