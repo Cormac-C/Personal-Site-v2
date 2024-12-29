@@ -1,7 +1,11 @@
 import React from "react";
 import { Navbar, NavbarBrand, Nav, Container, Button } from "react-bootstrap";
+import { motion } from "motion/react";
 
 const NavBar: React.FC = () => {
+  const HOVER_SCALE = 1.05;
+  const TAP_SCALE = 0.95;
+
   return (
     <div>
       <Navbar
@@ -16,24 +20,44 @@ const NavBar: React.FC = () => {
             href="/"
             className="!text-theme-blue hover:!text-theme-blue-accent !text-5xl !leading-[4.5rem] p-0 font-black"
           >
-            CC
+            <motion.div
+              whileHover={{ scale: HOVER_SCALE }}
+              whileTap={{ scale: TAP_SCALE }}
+            >
+              CC
+            </motion.div>
           </NavbarBrand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav" className="justify-end">
             <Nav>
-              <Nav.Link href="/about" className="mx-10">
-                About
+              <Nav.Link href="/about" className="md:mx-10">
+                <motion.div
+                  whileHover={{ scale: HOVER_SCALE }}
+                  whileTap={{ scale: TAP_SCALE }}
+                >
+                  About
+                </motion.div>
               </Nav.Link>
-              <Nav.Link href="/projects" className="mx-10">
-                Projects
+              <Nav.Link href="/projects" className="md:mx-10">
+                <motion.div
+                  whileHover={{ scale: HOVER_SCALE }}
+                  whileTap={{ scale: TAP_SCALE }}
+                >
+                  Projects{" "}
+                </motion.div>
               </Nav.Link>
-              <Button
-                className="!bg-theme-blue hover:!bg-theme-blue-accent text-white !text-2xl mx-10"
-                variant="nav"
-                href="/contact"
+              <motion.div
+                whileHover={{ scale: HOVER_SCALE }}
+                whileTap={{ scale: TAP_SCALE }}
               >
-                Contact
-              </Button>
+                <Button
+                  className="!bg-theme-blue hover:!bg-theme-blue-accent text-white !text-2xl md:mx-10"
+                  variant="nav"
+                  href="/contact"
+                >
+                  Contact
+                </Button>
+              </motion.div>
             </Nav>
           </Navbar.Collapse>
         </Container>
