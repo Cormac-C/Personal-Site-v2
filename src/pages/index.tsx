@@ -27,14 +27,19 @@ const IndexPage: React.FC = () => {
             className="justify-content-center align-center"
             align="center"
           >
-            <div className="md:mr-[20%] md:ml-0 mx-[10%]">
+            <motion.div
+              className="md:mr-[20%] md:ml-0 mx-[10%]"
+              initial={{ scale: 0.5, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.3 }}
+            >
               <StaticImage
                 className="rounded-full"
                 src="../images/face.jpg"
                 alt="Headshot"
                 placeholder="blurred"
               />
-            </div>
+            </motion.div>
           </Col>
         </Row>
         <Row xs={1} md={2} className="!mt-[5%]">
