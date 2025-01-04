@@ -27,14 +27,7 @@ module.exports = {
         path: `${__dirname}/src/projects`
       }
     },
-    "gatsby-plugin-mdx",
-    {
-      resolve: "@vercel/gatsby-plugin-vercel-analytics",
-      options: {
-        // (optional) Prints metrics in the console when true
-        debug: false
-      }
-    }
+    "gatsby-plugin-mdx"
   ],
   flags: {
     DEV_SSR: true
