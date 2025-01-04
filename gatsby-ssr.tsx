@@ -1,5 +1,5 @@
 import React from "react";
-import AnalyticsWrapper from "./src/components/AnalyticsWrapper";
+import AnalyticsWrapper from "./src/components/analyticsWrapper";
 
 export const onRenderBody = ({ setHtmlAttributes }) => {
   setHtmlAttributes({ lang: "en" });
