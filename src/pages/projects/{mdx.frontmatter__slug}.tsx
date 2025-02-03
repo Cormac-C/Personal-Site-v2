@@ -28,7 +28,15 @@ const Project: React.FC = ({ data, children }: any) => {
         </Row>
         <Row>
           <Container>
-            <GatsbyImage image={image} alt={data.mdx.frontmatter.title} />
+            {data.mdx.frontmatter.demo_gif ? (
+              <img
+                src={data.mdx.frontmatter.demo_gif}
+                alt={data.mdx.frontmatter.hero_image_alt}
+                className="w-full"
+              />
+            ) : (
+              <GatsbyImage image={image} alt={data.mdx.frontmatter.title} />
+            )}
           </Container>
         </Row>
         {outOfDate && (
@@ -60,6 +68,7 @@ export const query = graphql`
             gatsbyImageData
           }
         }
+        demo_gif
         hero_image_alt
       }
       id
