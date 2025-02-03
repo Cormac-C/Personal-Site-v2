@@ -1,7 +1,7 @@
 ---
 title: "Better Paste (Plugin for Obsidian)"
 tech: "Typescript · Obsidian Plugin"
-blurb: "Obsidian plugin which improves the ability to paste from a PDF into notes"
+blurb: "Obsidian plugin which improves the ability to paste from a PDF into notes."
 slug: "better-paste"
 hero_image: "./PasteDemoPNG.png"
 hero_image_alt: "Image of plugin results"
@@ -14,8 +14,16 @@ Github: [Repo](https://github.com/Cormac-C/obsidian-paste-plugin)
 
 ## Context
 
-I've been taking notes in [Obsidian](https://obsidian.md/) for the past 6ish months and it's been working well. However, it's pretty common that I'll be taking notes about a paper which is open in a PDF side by side with my notes, when I try to copy a section out of the paper and paste it into my notes and the formatting is ugly, there's plenty of extra newlines and blank lines. This quick plugin filters out the newlines and hyphenated words with a new 'clean paste' command.
+I've been taking notes in [Obsidian](https://obsidian.md/) for the past six months and it's been working great. However, when I'm reading a paper, I'll often have it open as a PDF side-by-side with my notes. Everything is smooth until I want to copy a couple sentences form the PDF
 
-It was pretty easy to quickly spin up this plugin, working off the [sample plugin template](https://github.com/obsidianmd/obsidian-sample-plugin) that the Obsidian team provided. It was also neat to switch to Typescript after thinking in Python for the past while. With the help of Copilot and Claude, the change in syntax felt pretty effortless. The plugin is pending approval to be available as an Obsidian
+and all of a sud-
 
-I'm looking at expanding the functionality to better handle Math and Latex which is another big pain point for me while taking notes but that seems to be a much more complicated can of worms.
+-den, my formatting is all over the place. There's newlines and blank lines, and hyphens all over the place. Now I'm out of the zone and I have to go back and trim out all the strange gaps that have been introduced into my notes.
+
+To fix this, I built this plugin which adds a 'clean paste' command. It allows me to easily paste in a couple clean lines with `CMD + SHIFT + V`.
+
+Using the [Obsidian sample plugin template](https://github.com/obsidianmd/obsidian-sample-plugin), it was quick to put together the plugin. Switching back to TypeScript out of Python mode was surprisingly smooth using Copilot and Claude.
+
+The plugin is pending approval to be listed in the Obsidian community plugins, I'll be curious to see if others find it useful.
+
+I may look at adding some functionality for parsing Math from PDFs into LaTeX, another speedbump in my notetaking process. However, after 30min of research it seems like the world of math in PDFs is unstandardized and messy, not as quick as filtering out some newlines.
