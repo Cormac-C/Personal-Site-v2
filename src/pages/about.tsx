@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Row } from "react-bootstrap";
 import NavBar from "../components/navbar";
 import Footer from "../components/footer";
+import { Link } from "gatsby";
 import { Seo } from "../components/seo";
 
 const AboutPage: React.FC = () => {
@@ -66,7 +67,7 @@ const AboutPage: React.FC = () => {
           </p>
           <p className="text-xl">
             I'm on the lookout for big, interesting problems in AI. If you'd
-            like to collaborate, please reach out.
+            like to collaborate, please <Link to="/contact">reach out</Link>.
           </p>
         </Row>
       </Container>
