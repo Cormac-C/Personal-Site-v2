@@ -40,7 +40,7 @@ const ContactPage: React.FC = () => {
           <Col className="justify-center" align="center" md={4} xs={12}>
             <StaticImage
               src="../images/github.svg"
-              alt="Github Icon"
+              alt="GitHub Icon"
               placeholder="dominantColor"
               loading="eager"
               layout="fixed"
