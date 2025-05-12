@@ -51,8 +51,6 @@ const LitePage: React.FC = () => {
           </li>
         </ul>
       </div>
-      <h2>Publications</h2>
-      <p>Coming Soon...</p>
       <h2>Contact</h2>
       <p>
         Email:{" "}
@@ -65,7 +63,7 @@ const LitePage: React.FC = () => {
         </a>
       </p>
       <p>
-        Github:{" "}
+        GitHub:{" "}
         <a href="https://github.com/Cormac-C" target="_blank" rel="noreferrer">
           Cormac-C
         </a>
