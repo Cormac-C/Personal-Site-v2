@@ -51,8 +51,8 @@ const LitePage: React.FC = () => {
           </li>
         </ul>
       </div>
-      <h2>Publications</h2>
-      <p>Coming Soon...</p>
+      {/* <h2>Publications</h2>
+      <p>Coming Soon...</p> */}
       <h2>Contact</h2>
       <p>
         Email:{" "}
