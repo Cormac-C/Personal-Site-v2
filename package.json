@@ -21,7 +21,7 @@
     "@vercel/speed-insights": "^1.1.0",
     "ajv": "^8.16.0",
     "bootstrap": "^5.1.0",
-    "gatsby": "^5.13.6",
+    "gatsby": "^5.14.6",
     "gatsby-plugin-image": "^3.13.1",
     "gatsby-plugin-mdx": "^5.13.1",
     "gatsby-plugin-sharp": "^5.13.1",
