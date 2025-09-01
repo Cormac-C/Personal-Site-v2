@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom spacing/utility fallbacks if needed */
+:root {
+  --max-margin: max(128px, 10%);
+}
+.container { max-width: 1200px; }
