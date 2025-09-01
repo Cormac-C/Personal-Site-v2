@@ -1,11 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import NavBar from '../components/navbar';
 import face from '../assets/face.jpg';
 import codeIcon from '../assets/codeIcon.svg';
 import profileIcon from '../assets/profileIcon.svg';
 ---
 
 <Layout title="Home | Cormac">
+	<NavBar client:load />
 	<main class="mt-max-margin min-h-body-min container mx-auto px-4">
 		<div class="grid grid-cols-1 md:grid-cols-2 items-center gap-y-12">
 			<div class="md:pr-8">
