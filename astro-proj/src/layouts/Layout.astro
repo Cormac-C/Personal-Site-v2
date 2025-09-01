@@ -1,14 +1,24 @@
 ---
+import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/global.css';
 // Accept a title prop with fallback
 const { title = 'Cormac Cureton' } = Astro.props;
+const createThemedIconHref = (char: string = "ⓒ"): string => {
+	// TODO: bring back colour scheme detection
+    // const colorScheme = "light";
+    return `data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90' fill='${
+    //   colorScheme === "dark" ? "white" : "black"
+	"black"
+    }'>${char}</text></svg>`;
+  };
 ---
+
 <!doctype html>
 <html lang="en" class="min-h-full">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href={createThemedIconHref("ⓒ")} />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
@@ -16,12 +26,3 @@ const { title = 'Cormac Cureton' } = Astro.props;
 		<slot />
 	</body>
 </html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>

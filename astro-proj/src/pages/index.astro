@@ -11,7 +11,7 @@ import profileIcon from '../assets/profileIcon.svg';
 	<main class="mt-max-margin min-h-body-min container mx-auto px-4">
 		<div class="grid grid-cols-1 md:grid-cols-2 items-center gap-y-12">
 			<div class="md:pr-8">
-				<div class="mb-8 text-theme-blue text-5xl md:!text-7xl font-bold">Cormac Cureton</div>
+				<div class="mb-8 text-theme-blue text-5xl md:!text-7xl">Cormac Cureton</div>
 				<div class="text-2xl font-semibold text-gray-600">
 					<a class="no-underline text-gray-600" href="/lite">AI Researcher</a>
 					<span class="mx-2">|</span>
@@ -25,9 +25,10 @@ import profileIcon from '../assets/profileIcon.svg';
 			</div>
 		</div>
 		<div class="grid grid-cols-1 md:grid-cols-2 mt-[5%] gap-8">
+			<!-- TODO: Look at underline of button text -->
 			<div class="flex justify-center">
 				<a href="/projects" class="min-w-48 inline-block">
-					<button class="w-full flex items-center justify-center gap-2 bg-theme-blue hover:bg-theme-blue-accent text-white text-2xl py-3 my-1 rounded-md transition-transform duration-150 active:scale-90 hover:scale-105">
+					<button class="w-full flex items-center justify-center gap-2 bg-theme-blue hover:bg-theme-blue-accent text-white text-2xl py-3 my-1 rounded-md transition-transform duration-150 active:scale-90 hover:scale-105 !no-underline">
 						<img src={codeIcon.src} alt="Code Icon" class="m-1" width="30" height="30" />
 						<span>View Projects</span>
 					</button>
@@ -35,7 +36,7 @@ import profileIcon from '../assets/profileIcon.svg';
 			</div>
 			<div class="flex justify-center">
 				<a href="/about" class="min-w-48 inline-block">
-					<button class="w-full flex items-center justify-center gap-2 border border-theme-blue text-theme-blue hover:bg-theme-blue-light text-2xl py-3 my-1 rounded-md transition-transform duration-150 active:scale-90 hover:scale-105">
+					<button class="w-full flex items-center justify-center gap-2 border border-theme-blue text-theme-blue hover:bg-theme-blue-light text-2xl py-3 my-1 rounded-md transition-transform duration-150 active:scale-90 hover:scale-105 !no-underline">
 						<img src={profileIcon.src} alt="Profile Icon" class="m-1" width="30" height="30" />
 						<span>About Me</span>
 					</button>
