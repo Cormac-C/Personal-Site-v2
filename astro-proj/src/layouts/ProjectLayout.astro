@@ -1,0 +1,63 @@
+---
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '../styles/global.css';
+import NavBar from "../components/navbar";
+import Footer from "../components/footer";
+import { Alert } from 'react-bootstrap';
+import { isProjectOutdated } from "../../../src/utils";
+
+// Frontmatter props from MDX
+const {
+  title = 'Project',
+  hero_image,
+  hero_image_alt,
+  endDate,
+  demo_gif
+} = Astro.props as any;
+
+const outdated = endDate ? isProjectOutdated(endDate) : false;
+
+// Derive slug from URL path for building image URL similar to list page logic
+const imageSrc = hero_image ? `/${hero_image}` : undefined;
+
+const pageTitle = `${title} | Cormac`;
+---
+<!doctype html>
+<html lang="en" class="min-h-full">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{pageTitle}</title>
+    {Astro.props.blurb && <meta name="description" content={Astro.props.blurb} />}
+  </head>
+  <body class="min-h-full antialiased bg-white text-gray-900">
+    <NavBar />
+    <main class="mt-32 min-h-body-min">
+      <div class="container">
+        <div class="mb-8 md:w-min md:whitespace-nowrap">
+          <h1 class="font-[calc(1.75rem+1.5vw)] after:content-[''] after:block after:w-full after:h-2 after:bg-theme-blue after:left-0 after:rounded-lg"> {title} </h1>
+        </div>
+        {(demo_gif || imageSrc) && (
+          <div class="mb-6">
+            {demo_gif ? (
+              <img src={demo_gif} alt={hero_image_alt || title} class="w-full" />
+            ) : (
+              imageSrc && <img src={imageSrc} alt={hero_image_alt || title} class="w-full max-h-[480px] object-contain mx-auto" />
+            )}
+          </div>
+        )}
+        {outdated && (
+          <div class="my-4">
+            <Alert variant="warning" className="text-lg">
+              FYI: This project was last updated on {endDate}. It may be out of date so take it with a grain of salt.
+            </Alert>
+          </div>
+        )}
+        <div class="mb-12 prose max-w-none">
+          <slot />
+        </div>
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html>
