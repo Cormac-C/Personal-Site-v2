@@ -42,6 +42,6 @@ const createThemedIconHref = (char: string = "ⓒ"): string => {
 	</head>
 	<body class="min-h-full antialiased bg-white text-gray-900">
 		<slot />
-		<AnalyticsWrapper />
+		<AnalyticsWrapper client:load/>
 	</body>
 </html>
