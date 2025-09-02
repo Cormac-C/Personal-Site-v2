@@ -1,1 +1,5 @@
 - Update personal site writeup to reflect Astro migration
+- Look at adding astrojs/image plugin
+- Change components to not use react
+  - Footer
+  - NavBar

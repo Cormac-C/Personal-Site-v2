@@ -2,7 +2,6 @@ import React from "react";
 import { Navbar, NavbarBrand, Nav, Container, Button } from "react-bootstrap";
 import { motion } from "motion/react";
 
-// TODO: This doesn't need to be a react component
 const NavBar: React.FC = () => {
   const HOVER_SCALE = 1.05;
   const TAP_SCALE = 0.95;

@@ -6,10 +6,16 @@ import mdx from "@astrojs/mdx";
 
 import vercel from "@astrojs/vercel";
 
+import sitemap from "@astrojs/sitemap";
+
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind({ applyBaseStyles: true }), react(), mdx()],
-  adapter: vercel()
+  integrations: [
+    tailwind({ applyBaseStyles: true }),
+    react(),
+    mdx(),
+    sitemap()
+  ],
+  adapter: vercel(),
+  site: "https://cormaccureton.com"
 });
-// TODO: Look at adding astrojs/image plugin
-// TODO: Add sitemap generation
