@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 // React components from original Gatsby codebase
 import NavBar from '../components/navbar';
-import Footer from '../components/footer';
+import Footer from '../components/footer.astro';
 
 const experiences = [
   { name: 'Valence Labs', link: 'https://www.valencelabs.com/' },
@@ -26,8 +26,8 @@ const experiences = [
         ))}
       </ul>
       <p>In my free time I'm often running, playing guitar, or trying to cheer the Leafs to victory.</p>
-      <p>I'm on the lookout for big, interesting problems in AI. If you'd like to collaborate, please <a href="/contact" class="text-theme-blue hover:text-theme-blue-accent">reach out</a>.</p>
+      <p>I'm going to be graduating in 2026 and am on the lookout for job opportunities. Please don't hesitate to <a href="/contact" class="text-theme-blue hover:text-theme-blue-accent">reach out</a>.</p>
     </div>
   </main>
-  <Footer client:load />
+  <Footer />
 </Layout>

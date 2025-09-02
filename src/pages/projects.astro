@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import NavBar from "../components/navbar";
-import Footer from "../components/footer";
+import Footer from "../components/footer.astro";
 import ProjectCard from "../components/projectCard";
 import { getCollection } from 'astro:content';
 
@@ -33,5 +33,5 @@ visible.sort((a, b) => new Date(b.data.endDate).getTime() - new Date(a.data.endD
         ))}
       </div>
     </main>
-    <Footer client:load/>
+    <Footer />
 </Layout>
