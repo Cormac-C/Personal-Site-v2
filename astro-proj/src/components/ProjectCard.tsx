@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, Row, Col, Badge } from "react-bootstrap";
-import { isProjectOutdated } from "../../../src/utils";
+import { isProjectOutdated } from "../lib/utils";
 
 interface ProjectCardProps {
   project: {

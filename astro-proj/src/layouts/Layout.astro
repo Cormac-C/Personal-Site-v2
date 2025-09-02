@@ -3,17 +3,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/global.css';
 import AnalyticsWrapper from '../components/analyticsWrapper';
 import { siteMeta, buildSeo } from '../lib/siteMeta';
+import { getColorSchemePreference } from '../lib/utils';
+
 // Accept props: title override or a richer seo object
 const { title: titleProp, seo: seoInput = {} } = Astro.props as any;
 const seo = buildSeo(siteMeta, { title: titleProp, ...(seoInput || {}) });
 const title = seo.title;
 const createThemedIconHref = (char: string = "ⓒ"): string => {
-	// TODO: bring back colour scheme detection
-    // const colorScheme = "light";
-    return `data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90' fill='${
-    //   colorScheme === "dark" ? "white" : "black"
-	"black"
-    }'>${char}</text></svg>`;
+    const colorScheme = getColorSchemePreference();
+    return `data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90' fill='${colorScheme === "dark" ? "white" : "black"}'>${char}</text></svg>`;
   };
 ---
 

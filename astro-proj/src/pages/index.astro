@@ -6,7 +6,6 @@ import codeIcon from '../assets/codeIcon.svg';
 import profileIcon from '../assets/profileIcon.svg';
 ---
 
-<!-- TODO: adjust spacing around image -->
 <Layout title="Home | Cormac">
 	<NavBar client:load />
 	<main class="mt-max-margin min-h-body-min mx-auto px-4 container">
@@ -26,9 +25,8 @@ import profileIcon from '../assets/profileIcon.svg';
 			</div>
 		</div>
 		<div class="grid grid-cols-1 md:grid-cols-2 mt-[5%] gap-8">
-			<!-- TODO: Look at underline of button text -->
 			<div class="flex justify-center">
-				<a href="/projects" class="min-w-48 inline-block">
+				<a href="/projects" class="min-w-48 inline-block no-underline">
 					<button class="w-full flex items-center justify-center gap-2 bg-theme-blue hover:bg-theme-blue-accent text-white text-2xl py-3 my-1 rounded-md transition-transform duration-150 active:scale-90 hover:scale-105 !no-underline">
 						<img src={codeIcon.src} alt="Code Icon" class="m-1" width="30" height="30" />
 						<span>View Projects</span>
@@ -36,7 +34,7 @@ import profileIcon from '../assets/profileIcon.svg';
 				</a>
 			</div>
 			<div class="flex justify-center">
-				<a href="/about" class="min-w-48 inline-block">
+				<a href="/about" class="min-w-48 inline-block no-underline">
 					<button class="w-full flex items-center justify-center gap-2 border border-theme-blue text-theme-blue hover:bg-theme-blue-light text-2xl py-3 my-1 rounded-md transition-transform duration-150 active:scale-90 hover:scale-105 !no-underline">
 						<img src={profileIcon.src} alt="Profile Icon" class="m-1" width="30" height="30" />
 						<span>About Me</span>
