@@ -1,6 +1,7 @@
 ---
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/global.css';
+import AnalyticsWrapper from '../components/analyticsWrapper';
 // Accept a title prop with fallback
 const { title = 'Cormac Cureton' } = Astro.props;
 const createThemedIconHref = (char: string = "ⓒ"): string => {
@@ -24,5 +25,6 @@ const createThemedIconHref = (char: string = "ⓒ"): string => {
 	</head>
 	<body class="min-h-full antialiased bg-white text-gray-900">
 		<slot />
+		<AnalyticsWrapper />
 	</body>
 </html>
