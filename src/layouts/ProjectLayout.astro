@@ -5,6 +5,7 @@ import NavBar from "../components/navbar";
 import Footer from "../components/footer";
 import { Alert } from 'react-bootstrap';
 import { isProjectOutdated } from "../lib/utils";
+import { Image } from 'astro:assets';
 
 // Frontmatter props from MDX
 const {
@@ -31,9 +32,9 @@ const pageTitle = `${title} | Cormac`;
       {(demo_gif || imageSrc) && (
         <div class="mb-6">
           {demo_gif ? (
-            <img src={demo_gif} alt={hero_image_alt || title} class="w-full" />
+            <Image src={demo_gif} alt={hero_image_alt || title} class="w-full" width={800} height={600} />
           ) : (
-            imageSrc && <img src={imageSrc} alt={hero_image_alt || title} class="w-full max-h-[480px] object-contain mx-auto" />
+            imageSrc && <Image src={imageSrc} alt={hero_image_alt || title} class="w-full max-h-[480px] object-contain mx-auto" width={800} height={600} />
           )}
         </div>
       )}
