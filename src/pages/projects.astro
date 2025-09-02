@@ -1,0 +1,37 @@
+---
+import Layout from "../layouts/Layout.astro";
+import NavBar from "../components/navbar";
+import Footer from "../components/footer";
+import ProjectCard from "../components/projectCard";
+import { getCollection } from 'astro:content';
+
+// Temporary local typing (Astro content collection types may not be generated yet)
+interface ProjectData { title:string; tech:string; blurb:string; hero_image?:string; hero_image_alt?:string; endDate:string; hide:string; }
+interface ProjectEntry { slug:string; body?:string; data: ProjectData; }
+
+// Fetch entries from the "projects" content collection
+const allProjects = (await (getCollection as any)('projects')) as ProjectEntry[]; // cast until `astro sync` generates types
+// Filter out hidden (schema normalizes hide to 'true' | 'false')
+const visible = allProjects.filter(p => p.data.hide !== 'true');
+// Sort by endDate descending (endDate stored as string YYYY-MM or YYYY-MM-DD)
+visible.sort((a, b) => new Date(b.data.endDate).getTime() - new Date(a.data.endDate).getTime());
+---
+<Layout title="Projects | Cormac">
+    <NavBar client:load/>
+    <main class="mt-32 container mx-auto px-4 min-h-body-min">
+      <h1 class="mb-8 relative inline-block text-4xl font-bold after:content-[''] after:block after:w-full after:h-2 after:bg-theme-blue after:rounded-lg">Projects</h1>
+      <div class="grid gap-4 lg:grid-cols-2">
+        {visible.map(p => (
+          <ProjectCard project={{
+            title: p.data.title,
+            subtitle: p.data.tech,
+            description: p.data.blurb,
+            image: p.data.hero_image ? p.data.hero_image : undefined,
+            link: p.slug,
+            endDate: p.data.endDate
+          }} />
+        ))}
+      </div>
+    </main>
+    <Footer client:load/>
+</Layout>

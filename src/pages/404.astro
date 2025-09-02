@@ -1,0 +1,22 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="404: Page Not Found" seo={{ description: "The page you were looking for could not be found.", noIndex: true }}>
+	<main class="mt-max-margin min-h-body-min p-24 container">
+        <div class="max-w-2xl">
+			<h1 class="text-5xl sm:text-6xl font-extrabold leading-tight mb-6">Page not found</h1>
+			<p class="text-lg text-gray-600 mb-8">
+				Sorry, this page doesn't exist or has been moved.
+				Please check the URL, or return to home.
+			</p>
+            <p class="text-lg mb-8">
+                <a href="/">Go Home</a>
+            </p>
+		</div>
+		<div class="text-lg text-gray-600">
+			If you think this is a mistake, feel free to <a href="/contact" class="underline hover:text-theme-blue">contact me</a>.
+		</div>
+	</main>
+</Layout>
+

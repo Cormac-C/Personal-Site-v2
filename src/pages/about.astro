@@ -1,0 +1,33 @@
+---
+import Layout from '../layouts/Layout.astro';
+// React components from original Gatsby codebase
+import NavBar from '../components/navbar';
+import Footer from '../components/footer';
+
+const experiences = [
+  { name: 'Valence Labs', link: 'https://www.valencelabs.com/' },
+  { name: 'Scispot', link: 'https://www.scispot.com/' },
+  { name: 'Xe', link: 'https://www.xe.com/' },
+  { name: 'TD Payments Innovation', link: 'https://www.td.com/ca/en/commercial-banking' },
+  { name: '360 Education Labs Inc', link: 'https://www.yuja.com/' },
+];
+---
+<Layout title="About | Cormac">
+  <NavBar client:load />
+  <main class="mt-32 min-h-body-min container mx-auto px-4">
+    <h1 class="mb-8 relative inline-block text-4xl font-bold after:content-[''] after:block after:w-full after:h-2 after:bg-theme-blue after:rounded-lg">About Me</h1>
+    <div class="space-y-4 text-xl text-gray-800">
+      <p>Currently, M.Sc. Student in the <a class="font-medium no-underline text-gray-600 hover:text-theme-blue" href="https://ismart.ece.mcgill.ca/" target="_blank" rel="noreferrer">iSMART Lab</a> under the supervision of Prof. Narges Armanfard at McGill.</p>
+      <p>Alum of Systems Design Engineering at University of Waterloo.</p>
+      <p>Previously at</p>
+      <ul class="list-disc list-inside">
+        {experiences.map(exp => (
+          <li><a class="font-medium no-underline text-gray-600 hover:text-theme-blue" href={exp.link} target="_blank" rel="noreferrer">{exp.name}</a></li>
+        ))}
+      </ul>
+      <p>In my free time I'm often running, playing guitar, or trying to cheer the Leafs to victory.</p>
+      <p>I'm on the lookout for big, interesting problems in AI. If you'd like to collaborate, please <a href="/contact" class="text-theme-blue hover:text-theme-blue-accent">reach out</a>.</p>
+    </div>
+  </main>
+  <Footer client:load />
+</Layout>

@@ -1,0 +1,54 @@
+---
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Layout from './Layout.astro';
+import NavBar from "../components/navbar";
+import Footer from "../components/footer";
+import { Alert } from 'react-bootstrap';
+import { isProjectOutdated } from "../lib/utils";
+import { Image } from 'astro:assets';
+
+// Frontmatter props from MDX
+const {
+  title = 'Project',
+  hero_image,
+  hero_image_alt,
+  endDate,
+  demo_gif
+} = Astro.props as any;
+
+const outdated = endDate ? isProjectOutdated(endDate) : false;
+
+const imageSrc =  `/${hero_image}`;
+
+const pageTitle = `${title} | Cormac`;
+---
+<Layout title={pageTitle} />
+  <NavBar />
+  <main class="mt-32 min-h-body-min">
+    <div class="container">
+      <div class="mb-8 md:w-min md:whitespace-nowrap">
+        <h1 class="font-[calc(1.75rem+1.5vw)] after:content-[''] after:block after:w-full after:h-2 after:bg-theme-blue after:left-0 after:rounded-lg"> {title} </h1>
+      </div>
+      {(demo_gif || imageSrc) && (
+        <div class="mb-6">
+          {demo_gif ? (
+            <Image src={demo_gif} alt={hero_image_alt || title} class="w-full" width={800} height={600} />
+          ) : (
+            imageSrc && <Image src={imageSrc} alt={hero_image_alt || title} class="w-full max-h-[480px] object-contain mx-auto" width={800} height={600} />
+          )}
+        </div>
+      )}
+      {outdated && (
+        <div class="my-4">
+          <Alert variant="warning" className="text-lg">
+            FYI: This project was last updated on {endDate}. It may be out of date so take it with a grain of salt.
+          </Alert>
+        </div>
+      )}
+      <div class="mb-12 prose max-w-none">
+        <slot />
+      </div>
+    </div>
+  </main>
+  <Footer />
+</Layout>

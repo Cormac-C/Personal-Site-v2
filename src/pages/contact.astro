@@ -1,0 +1,31 @@
+---
+import Layout from '../layouts/Layout.astro';
+import NavBar from '../components/navbar';
+import Footer from '../components/footer';
+import ContactButton from '../components/contactButton';
+import emailIcon from '../assets/email.svg';
+import githubIcon from '../assets/github.svg';
+import linkedinIcon from '../assets/linkedin.svg';
+---
+<Layout title="Contact | Cormac">
+  <NavBar client:load />
+  <main class="mt-32 min-h-body-min container mx-auto px-4">
+    <h1 class="mb-8 relative inline-block text-4xl font-bold after:content-[''] after:block after:w-full after:h-2 after:bg-theme-blue after:rounded-lg">Contact</h1>
+    <p class="text-xl mb-12">Don't hesitate to reach out</p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="flex flex-col items-center text-center">
+        <img src={emailIcon.src} alt="Email Icon" width="100" height="100" loading="eager" />
+        <ContactButton client:load text="cormaccureton@gmail.com" email="cormaccureton@gmail.com" />
+      </div>
+      <div class="flex flex-col items-center text-center">
+        <img src={githubIcon.src} alt="GitHub Icon" width="100" height="100" loading="eager" />
+        <ContactButton client:load text="Cormac-C" link="https://github.com/Cormac-C" />
+      </div>
+      <div class="flex flex-col items-center text-center">
+        <img src={linkedinIcon.src} alt="LinkedIn Icon" width="100" height="100" loading="eager" />
+        <ContactButton client:load text="cormaccureton" link="https://www.linkedin.com/in/cormaccureton/" />
+      </div>
+    </div>
+  </main>
+  <Footer client:load />
+</Layout>

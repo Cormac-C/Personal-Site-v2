@@ -1,0 +1,47 @@
+---
+collection: projects
+title: "LLM Reasoning Sub-Skills with Synthetic Data"
+tech: "LLMs · Huggingface · PyTorch"
+blurb: "Investigating improving LLM reasoning performance with synthetic data."
+hero_image: "projects/DecompPoster.png"
+hero_image_alt: "Screenshot of project poster"
+endDate: "2024-12-23"
+hide: False
+---
+
+GitHub: [Repo](https://github.com/Cormac-C/llm-reasoning-decomp)
+
+## Context
+
+This project was completed for COMP 767 (Large Language Models) with Abhijeet Praveen with Mentorship from Xiaoyin Chen. Although our initial results weren't great it was a fun project
+
+## Abstract
+
+This work investigates the potential of fine-
+tuning large language models (LLMs) using
+programmatically generated synthetic data to
+enhance their reasoning sub-skills. The study
+focuses on search as a foundational reason-
+ing sub-skill and evaluates its transferability
+to higher-order reasoning tasks, specifically Su-
+doku and Zebra puzzles. Using Low-Rank
+Adaptation (LoRA), we fine-tune LLMs on
+synthetic search trajectories without increasing
+inference-time computational costs, address-
+ing the challenge of high-quality reasoning
+data scarcity. Our experiments employ Par-
+tial Accuracy and Strict Accuracy metrics to
+assess the effectiveness of fine-tuning and high-
+light task-specific performance variations. Re-
+sults demonstrate that fine-tuning on synthetic
+search trajectories offers marginal improve-
+ments in zero shot Zebra puzzle performance
+compared to the base model. Synthetically fine-
+tuned models don’t offer any improvements
+when tested on Sudoku. As expected, mod-
+els fine-tuned directly on task-specific datasets
+consistently outperform search-fine-tuned mod-
+els, emphasizing the value of task-specific data.
+This study underscored the difficulty in improv-
+ing model attributes which generalize across
+tasks,
