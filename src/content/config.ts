@@ -11,6 +11,7 @@ const projects = defineCollection({
     demo_gif: z.string().optional(),
     endDate: z.string(),
     hide: z.string().transform((v) => (v === "true" ? "true" : "false"))
+    // TODO: Maybe change hide to a boolean
   })
 });
 

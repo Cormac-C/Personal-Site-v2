@@ -11,3 +11,5 @@ export default defineConfig({
   integrations: [tailwind({ applyBaseStyles: true }), react(), mdx()],
   adapter: vercel()
 });
+// TODO: Look at adding astrojs/image plugin
+// TODO: Add sitemap generation
