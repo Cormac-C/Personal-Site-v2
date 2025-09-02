@@ -2,8 +2,11 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/global.css';
 import AnalyticsWrapper from '../components/analyticsWrapper';
-// Accept a title prop with fallback
-const { title = 'Cormac Cureton' } = Astro.props;
+import { siteMeta, buildSeo } from '../lib/siteMeta';
+// Accept props: title override or a richer seo object
+const { title: titleProp, seo: seoInput = {} } = Astro.props as any;
+const seo = buildSeo(siteMeta, { title: titleProp, ...(seoInput || {}) });
+const title = seo.title;
 const createThemedIconHref = (char: string = "ⓒ"): string => {
 	// TODO: bring back colour scheme detection
     // const colorScheme = "light";
@@ -22,6 +25,22 @@ const createThemedIconHref = (char: string = "ⓒ"): string => {
 		<link rel="icon" href={createThemedIconHref("ⓒ")} />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<meta name="description" content={seo.description} />
+		<meta name="image" content={seo.image} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={seo.description} />
+		<meta property="og:type" content={seo.type} />
+		<meta property="og:url" content={seo.url} />
+		<meta property="og:image" content={seo.image} />
+		{seo.publishedTime && <meta property="article:published_time" content={seo.publishedTime} />}
+		{seo.modifiedTime && <meta property="article:modified_time" content={seo.modifiedTime} />}
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={seo.description} />
+		<meta name="twitter:image" content={seo.image} />
+		{siteMeta.twitterHandle && <meta name="twitter:site" content={siteMeta.twitterHandle} />}
+		{siteMeta.googleVerification && <meta name="google-site-verification" content={siteMeta.googleVerification} />}
+		{seo.noIndex && <meta name="robots" content="noindex,nofollow" />}
 	</head>
 	<body class="min-h-full antialiased bg-white text-gray-900">
 		<slot />
