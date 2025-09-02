@@ -16,6 +16,12 @@ export default defineConfig({
     mdx(),
     sitemap()
   ],
-  adapter: vercel(),
+  adapter: vercel({
+    imagesConfig: {
+      sizes: [384, 600, 800],
+      formats: ["image/avif", "image/webp"],
+      dangerouslyAllowSVG: true
+    }
+  }),
   site: "https://cormaccureton.com"
 });

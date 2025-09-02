@@ -1,4 +1,0 @@
-- Optimize more image handling
-- Change components to not use react
-  - NavBar
-  - ContactButton
