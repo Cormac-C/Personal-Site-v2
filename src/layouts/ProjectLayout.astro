@@ -51,12 +51,11 @@ const pageTitle = `${title} | Cormac`;
       </div>
       {pdf_url && (
         <div class="mb-12">
-          {/* Desktop: Show iframe, hidden on mobile (md breakpoint and below) */}
+          {/* Desktop: Show iframe, hidden below lg breakpoint (< 1024px) */}
           <div class="hidden lg:block">
             <iframe
               src={pdf_url}
-              class="w-full border-2 border-gray-300 rounded-lg"
-              style="height: 800px;"
+              class="w-full h-[800px] border-2 border-gray-300 rounded-lg"
               title={`${title} PDF`}
             />
           </div>
