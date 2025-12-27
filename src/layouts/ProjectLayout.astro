@@ -13,7 +13,8 @@ const {
   hero_image,
   hero_image_alt,
   endDate,
-  demo_gif
+  demo_gif,
+  pdf_url
 } = Astro.props as any;
 
 const outdated = endDate ? isProjectOutdated(endDate) : false;
@@ -48,6 +49,29 @@ const pageTitle = `${title} | Cormac`;
       <div class="mb-12 prose max-w-none">
         <slot />
       </div>
+      {pdf_url && (
+        <div class="mb-12">
+          {/* Desktop: Show iframe, hidden on mobile (md breakpoint and below) */}
+          <div class="hidden lg:block">
+            <iframe
+              src={pdf_url}
+              class="w-full border-2 border-gray-300 rounded-lg"
+              style="height: 800px;"
+              title={`${title} PDF`}
+            />
+          </div>
+          {/* Mobile: Show download button, hidden on desktop */}
+          <div class="lg:hidden text-center">
+            <a
+              href={pdf_url}
+              download
+              class="inline-block px-6 py-3 bg-theme-blue text-white font-semibold rounded-lg hover:bg-theme-blue-accent transition-colors"
+            >
+              Download PDF
+            </a>
+          </div>
+        </div>
+      )}
     </div>
   </main>
   <Footer />
