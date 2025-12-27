@@ -13,12 +13,15 @@ const {
   hero_image,
   hero_image_alt,
   endDate,
-  demo_gif
+  demo_gif,
+  pdf_url
 } = Astro.props as any;
 
 const outdated = endDate ? isProjectOutdated(endDate) : false;
 
 const imageSrc =  `/${hero_image}`;
+
+const pdfSrc = pdf_url ? `/${pdf_url}` : null;
 
 const pageTitle = `${title} | Cormac`;
 ---
@@ -30,12 +33,32 @@ const pageTitle = `${title} | Cormac`;
         <h1 class="font-[calc(1.75rem+1.5vw)] after:content-[''] after:block after:w-full after:h-2 after:bg-theme-blue after:left-0 after:rounded-lg"> {title} </h1>
       </div>
       {(demo_gif || imageSrc) && (
-        <div class="mb-6">
+        <div class={`mb-6 ${pdfSrc ? 'lg:hidden' : ''}`}>
           {demo_gif ? (
             <Image src={demo_gif} alt={hero_image_alt || title} class="w-full" width={800} height={600} />
           ) : (
             imageSrc && <Image src={imageSrc} alt={hero_image_alt || title} class="w-full max-h-[480px] object-contain mx-auto" width={800} height={600} />
           )}
+        </div>
+      )}
+      {pdfSrc && (
+        <div class="mb-12">
+          <div class="hidden lg:block">
+            <iframe
+              src={pdfSrc}
+              class="w-full h-[800px] border-2 border-gray-300 rounded-lg"
+              title={`${title} PDF`}
+            />
+          </div>
+          <div class="lg:hidden text-center">
+            <a
+              href={pdfSrc}
+              download
+              class="inline-block px-6 py-3 bg-theme-blue text-white font-semibold rounded-lg hover:bg-theme-blue-accent transition-colors"
+            >
+              Download PDF
+            </a>
+          </div>
         </div>
       )}
       {outdated && (
