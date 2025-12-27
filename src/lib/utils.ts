@@ -1,7 +1,7 @@
 export const isProjectOutdated = (endDate: string): boolean => {
   const dateDiff = new Date().getTime() - new Date(endDate).getTime();
-  // Project is out of date if the end date is more than 6 months ago
-  return dateDiff > 1000 * 60 * 60 * 24 * 30 * 6;
+  const OUTDATED_NUMBER_OF_MONTHS = 12;
+  return dateDiff > 1000 * 60 * 60 * 24 * 30 * OUTDATED_NUMBER_OF_MONTHS;
 };
 
 export const getColorSchemePreference = () => {

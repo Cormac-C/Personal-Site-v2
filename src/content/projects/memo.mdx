@@ -1,0 +1,21 @@
+---
+collection: projects
+title: "MEMO: Test Time Robustness Reimplementation and Investigation"
+tech: "CV · Information Theory · PyTorch"
+blurb: "Reimplementing MEMO in PyTorch and replicating results from the original paper along with further investigation."
+hero_image: "projects/memo.png"
+hero_image_alt: "Screenshot of paper front page"
+pdf_url: "reports/memo.pdf"
+endDate: "2025-12-04"
+hide: False
+---
+
+GitHub: [Repo](https://github.com/Cormac-C/memo-proj)
+
+## Context
+
+This project was completed for COMP 626 (Statistical Computer Vision). I reimplemented portions of the MEMO test time adaptation method introduced [here](https://proceedings.neurips.cc/paper_files/paper/2022/file/fc28053a08f59fccb48b11f2e31e81c7-Paper-Conference.pdf). I successfully replicated some of the core results of the paper and did some more investigation into the conditions where this approach is effective.
+
+## Abstract
+
+Test time robustification seeks to increase the performance of a pretrained model when confronted with challenging inputs such as domain shifts. Marginal entropy minimization with one test point (MEMO) improves image classification robustness with a full parameter update minimizing marginal entropy. The marginal entropy is computed as the entropy of the mean output distribution with respect to a group of randomly selected image augmentations. This report finds that MEMO improves classification performance on CIFAR-10 and ImageNet variant test sets with pretrained ResNet-26 and ResNet-50 base models. Further, analysis finds that the method most improves predictions for samples with high initial predictive entropy which also tend to have high marginal entropy. When the base model is uncertain, the method can nudge the predictive distribution in the right direction but it does not tend to improve samples where the model is confidently incorrect. Finally, improvements in classification performance are found to come at a cost of increased accuracy-confidence gap, meaning model calibration becomes worse. These trade-offs mean that MEMO is a practical option to improve predictions on individual unlabelled test points when calibration is not important and increased inference cost is acceptable.
