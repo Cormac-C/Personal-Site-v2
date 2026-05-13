@@ -1,0 +1,14 @@
+@import "bootstrap/dist/css/bootstrap.min.css" layer(base);
+
+@import "tailwindcss";
+
+@theme {
+  /* Colors */
+  --color-theme-blue: #597ede;
+  --color-theme-blue-accent: #4160b0;
+  --color-theme-blue-light: #cdd8f5;
+
+  /* Spacing */
+  --spacing-body-min: calc(100vh - 128px - 1rem);
+  --spacing-max-margin: max(128px, 10%);
+}
