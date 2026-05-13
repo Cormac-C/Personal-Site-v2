@@ -1,6 +1,6 @@
-@import "bootstrap/dist/css/bootstrap.min.css" layer(base);
-
 @import "tailwindcss";
+
+@import "bootstrap/dist/css/bootstrap.min.css" layer(base);
 
 @theme {
   /* Colors */
