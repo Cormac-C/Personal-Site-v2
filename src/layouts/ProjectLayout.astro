@@ -36,7 +36,7 @@ const pageTitle = `${title} | Cormac`;
           {demo_gif ? (
             <Image src={demo_gif} alt={hero_image_alt || title} class="w-full" width={800} height={600} />
           ) : (
-            imageSrc && <Image src={imageSrc} alt={hero_image_alt || title} class="w-full max-h-[480px] object-contain mx-auto" width={800} height={600} />
+            imageSrc && <Image src={imageSrc} alt={hero_image_alt || title} class="w-full max-h-120 object-contain mx-auto" width={800} height={600} />
           )}
         </div>
       )}
@@ -45,7 +45,7 @@ const pageTitle = `${title} | Cormac`;
           <div class="hidden lg:block">
             <iframe
               src={pdfSrc}
-              class="w-full h-[800px] border-2 border-gray-300 rounded-lg"
+              class="w-full h-200 border-2 border-gray-300 rounded-lg"
               title={`${title} PDF`}
             />
           </div>
