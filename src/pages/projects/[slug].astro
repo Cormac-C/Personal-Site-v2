@@ -1,16 +1,23 @@
 ---
-import { getEntry, getCollection, render } from "astro:content";
+import { getCollection, render } from "astro:content";
 import ProjectLayout from "../../layouts/ProjectLayout.astro";
+import { slugify } from "../../lib/utils";
 
 // Provide all valid slugs for static generation.
 export async function getStaticPaths() {
   const projects = await getCollection("projects");
-  return projects.map((entry) => ({ params: { slug: entry.slug } }));
+  return projects.map((entry: any) => {
+    const preferredSlug = entry.data.slug ?? slugify(entry.data.title);
+    return { 
+      params: { slug: preferredSlug}, 
+      props: { entry } 
+    };
+  });
 }
 
-const { slug } = Astro.params;
-const entry = await getEntry("projects", slug);
-if (!entry) throw new Error(`Project not found: ${slug}`);
+const { entry } = Astro.props;
+
+if (!entry) throw new Error(`Project not found`);
 
 const { Content } = await render(entry);
 const { data: frontmatter } = entry;

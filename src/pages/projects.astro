@@ -4,9 +4,10 @@ import NavBar from "../components/navbar";
 import Footer from "../components/footer.astro";
 import ProjectCard from "../components/projectCard.astro";
 import { getCollection } from 'astro:content';
+import { slugify } from "../lib/utils";
 
 // Temporary local typing (Astro content collection types may not be generated yet)
-interface ProjectData { title:string; tech:string; blurb:string; hero_image?:string; hero_image_alt?:string; endDate:string; hide:string; }
+interface ProjectData { title:string; tech:string; blurb:string; hero_image?:string; hero_image_alt?:string; endDate:string; hide:string; slug?:string; }
 interface ProjectEntry { slug:string; body?:string; data: ProjectData; }
 
 // Fetch entries from the "projects" content collection
@@ -24,10 +25,11 @@ visible.sort((a, b) => new Date(b.data.endDate).getTime() - new Date(a.data.endD
         {visible.map(p => (
           <ProjectCard project={{
             title: p.data.title,
+            slug: p.data.slug,
             subtitle: p.data.tech,
             description: p.data.blurb,
             image: p.data.hero_image ? p.data.hero_image : undefined,
-            link: p.slug,
+            link: p.data.slug ? p.data.slug : slugify(p.data.title),
             endDate: p.data.endDate
           }} />
         ))}

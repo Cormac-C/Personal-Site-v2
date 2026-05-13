@@ -4,6 +4,14 @@ export const isProjectOutdated = (endDate: string): boolean => {
   return dateDiff > 1000 * 60 * 60 * 24 * 30 * OUTDATED_NUMBER_OF_MONTHS;
 };
 
+export const slugify = (value: string): string =>
+  value
+    .toLowerCase()
+    .trim()
+    .replace(/['"’]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+
 export const getColorSchemePreference = () => {
   if (
     typeof window !== "undefined" &&
