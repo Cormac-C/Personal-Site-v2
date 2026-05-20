@@ -6,6 +6,10 @@ interface Project {
   link: string;
   endDate: string;
   subtitle: string;
+  publicationBadge?: {
+    label: string;
+    tone: "red" | "blue";
+  };
   description: string;
   image?: string; // path relative to content file
 }
@@ -21,7 +25,7 @@ const outdated = isProjectOutdated(project.endDate);
     class="no-underline md:h-full md:block"
   >
     <div
-      class="rounded-xl px-4 py-auto mb-12 md:min-h-56 md:pt-8 md:pb-4 hover:shadow-md md:!h-[calc(100%-32px)] card"
+      class="rounded-xl px-4 py-auto mb-12 md:min-h-56 md:pt-8 md:pb-4 hover:shadow-md md:h-[calc(100%-32px)]! card"
     >
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         {project.image && (
@@ -41,6 +45,18 @@ const outdated = isProjectOutdated(project.endDate);
             {outdated && (
               <span class="inline-block rounded-full bg-gray-300 text-gray-700 px-2 py-0.5 text-sm">
                 🕒 Old
+              </span>
+            )}
+            {project.publicationBadge && (
+              <span
+                class:list={[
+                  "inline-block rounded-full px-2 py-0.5 text-sm",
+                  project.publicationBadge.tone === "red"
+                    ? "bg-red-100 text-red-700"
+                    : "bg-blue-100 text-blue-700",
+                ]}
+              >
+                {project.publicationBadge.label}
               </span>
             )}
             {project.subtitle}
