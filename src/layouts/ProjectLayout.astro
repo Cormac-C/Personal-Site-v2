@@ -36,7 +36,7 @@ const authorsList = authors ? authors.split(",").map((author: string) => author.
       </div>
       {authors && (
         <p class="mb-6 text-lg text-gray-600">
-          {authorsList.map((author, index) => {
+          {authorsList.map((author: string, index: number) => {
             const highlight = authorHighlightSnippets.some(snippet =>
               author.includes(snippet)
             );
