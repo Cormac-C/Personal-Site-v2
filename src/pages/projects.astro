@@ -6,33 +6,75 @@ import ProjectCard from "../components/projectCard.astro";
 import { getCollection } from 'astro:content';
 import { slugify } from "../lib/utils";
 
+type ProjectCategory = "publication" | "machine-learning" | "software";
+
 // Temporary local typing (Astro content collection types may not be generated yet)
-interface ProjectData { title:string; tech:string; blurb:string; hero_image?:string; hero_image_alt?:string; endDate:string; hide:string; slug?:string; }
+interface ProjectData { title:string; tech:string; blurb:string; hero_image?:string; hero_image_alt?:string; endDate:string; hide:boolean; slug?:string; category?:ProjectCategory; preprint?:boolean; venue?:string; authors?:string; }
 interface ProjectEntry { slug:string; body?:string; data: ProjectData; }
+
+const sectionMeta: Record<ProjectCategory, { label: string }> = {
+  "publication": { label: "Publications & Preprints" },
+  "machine-learning": { label: "Machine Learning Projects" },
+  "software": { label: "Software Projects" },
+};
+
+const sectionGridClasses: Record<ProjectCategory, string> = {
+  "publication": "grid gap-4",
+  "machine-learning": "grid gap-4 lg:grid-cols-2",
+  "software": "grid gap-4 lg:grid-cols-2",
+};
+
+const sortByEndDateDescending = (projects: ProjectEntry[]) =>
+  [...projects].sort((a, b) => new Date(b.data.endDate).getTime() - new Date(a.data.endDate).getTime());
 
 // Fetch entries from the "projects" content collection
 const allProjects = (await (getCollection as any)('projects')) as ProjectEntry[]; // cast until `astro sync` generates types
-// Filter out hidden (schema normalizes hide to 'true' | 'false')
-const visible = allProjects.filter(p => p.data.hide !== 'true');
-// Sort by endDate descending (endDate stored as string YYYY-MM or YYYY-MM-DD)
-visible.sort((a, b) => new Date(b.data.endDate).getTime() - new Date(a.data.endDate).getTime());
+// Filter out hidden entries and group the rest by category.
+const visible = allProjects.filter(p => !p.data.hide);
+const projectsByCategory: Record<ProjectCategory, ProjectEntry[]> = {
+  "publication": sortByEndDateDescending(visible.filter(project => project.data.category === "publication")),
+  "machine-learning": sortByEndDateDescending(visible.filter(project => project.data.category === "machine-learning")),
+  "software": sortByEndDateDescending(visible.filter(project => !project.data.category || project.data.category === "software")),
+};
 ---
 <Layout title="Projects | Cormac">
     <NavBar client:load/>
     <main class="mt-32 container mx-auto px-4 min-h-body-min">
       <h1 class="mb-8 relative inline-block text-4xl font-bold after:content-[''] after:block after:w-full after:h-2 after:bg-theme-blue after:rounded-lg">Projects</h1>
-      <div class="grid gap-4 lg:grid-cols-2">
-        {visible.map(p => (
-          <ProjectCard project={{
-            title: p.data.title,
-            slug: p.data.slug,
-            subtitle: p.data.tech,
-            description: p.data.blurb,
-            image: p.data.hero_image ? p.data.hero_image : undefined,
-            link: p.data.slug ? p.data.slug : slugify(p.data.title),
-            endDate: p.data.endDate
-          }} />
-        ))}
+      <div class="space-y-12">
+        {Object.entries(sectionMeta).map(([category, meta]) => {
+          const projects = projectsByCategory[category as ProjectCategory];
+
+          if (!projects.length) {
+            return null;
+          }
+
+          return (
+            <section>
+              <h2 class="mb-4 text-2xl font-semibold text-black">{meta.label}</h2>
+              <div class={sectionGridClasses[category as ProjectCategory]}>
+                {projects.map(p => (
+                  <ProjectCard project={{
+                    title: p.data.title,
+                    slug: p.data.slug,
+                    subtitle: p.data.tech,
+                    publicationBadge: p.data.category === "publication" && (p.data.preprint || p.data.venue)
+                      ? {
+                          label: p.data.preprint ? "Preprint" : p.data.venue as string,
+                          tone: p.data.preprint ? "red" : "blue",
+                        }
+                      : undefined,
+                    authors: p.data.category === "publication" ? p.data.authors : undefined,
+                    description: p.data.blurb,
+                    image: p.data.hero_image ? p.data.hero_image : undefined,
+                    link: p.data.slug ? p.data.slug : slugify(p.data.title),
+                    endDate: p.data.endDate
+                  }} />
+                ))}
+              </div>
+            </section>
+          );
+        })}
       </div>
     </main>
     <Footer />

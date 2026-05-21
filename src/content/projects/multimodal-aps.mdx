@@ -1,0 +1,20 @@
+---
+collection: projects
+title: "Supervised Multimodal Model for Plasma Spray Diagnostics and Spray Health Monitoring"
+slug: "multimodal-aps"
+tech: "TabPFN · Multimodal Learning · Atmospheric Plasma Spray"
+blurb: "This work bridges foundation models and industrial intelligence, showing how multitask priors can redefine tabular learning in real-world systems."
+hero_image: "projects/APS_figure.png"
+hero_image_alt: "Diagram of axial APS system"
+category: publication
+preprint: True
+authors: "Cormac Cureton, Abhijeet Praveen, Sareh Soleimani, Aman Sidhu, Kintak Raymond Yu, Cristian Cojocaru, Narges Armanfard"
+endDate: "2026-03-16"
+hide: False
+---
+
+Preprint: [SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6427246)
+
+## Abstract
+
+In atmospheric plasma spray (APS) processes, the stability of in-flight particle characteristics, particularly, temperature and velocity, is critical for achieving consistent and high-quality coatings under defined spray conditions. Although these characteristics are expected to remain stable when operating parameters are fixed, electrode aging introduces significant variability over time, often leading to deteriorated spray performance. This paper presents a supervised multimodal learning framework that predicts in-flight particle temperature and velocity using co-recorded video and audio sensing, APS process parameters augmented with explicit incorporation of the torch electrode aging factor. The approach performs comprehensive spatiotemporal and acoustic feature extraction, applies targeted feature selection, and integrates the resulting representations into a unified predictive model. To the best of our knowledge, this is the first multimodal particle characteristic prediction framework that can be seamlessly integrated into industrial APS systems for spray-health monitoring. Within similar operating conditions, the framework does not require dedicated in-flight measurement instruments after training. Experimental results, obtained after evaluating different combinations of sensing modalities and feature sets, demonstrate that the best performance leverages different data modalities for temperature and velocity prediction. A combination of logs, spectro-temporal windowed video, and audio FFT features achieves R​2 of 0.96 for temperature prediction and a combination of logs and geometric averaged video features reaches R2 of 0.84 for velocity prediction, and strong PAM scores across all thresholds. These results highlight the practical utility of the proposed approach for maintaining coating consistency and enabling data-driven control in industrial APS environments.

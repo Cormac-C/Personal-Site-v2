@@ -7,6 +7,10 @@ const projects = defineCollection({
   schema: z.object({
     title: z.string(),
     slug: z.string().optional(),
+    category: z.enum(["publication", "machine-learning", "software"]).optional(),
+    preprint: z.boolean().optional(),
+    venue: z.string().optional(),
+    authors: z.string().optional(),
     tech: z.string(),
     blurb: z.string(),
     hero_image: z.string().optional(),
