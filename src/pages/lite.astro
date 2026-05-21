@@ -1,5 +1,15 @@
 ---
 const title = 'Cormac Cureton - Lite';
+import { getCollection } from 'astro:content';
+
+const allProjects = (await getCollection('projects')) as any[];
+const publications = allProjects
+	.filter(p => p.data.category === 'publication' && !p.data.hide)
+	.sort((a, b) => new Date(b.data.endDate).getTime() - new Date(a.data.endDate).getTime());
+
+const pubYear = (p: any) => {
+	try { return new Date(p.data.endDate).getFullYear(); } catch (e) { return '' }
+}
 ---
 
 <!doctype html>
@@ -28,6 +38,22 @@ const title = 'Cormac Cureton - Lite';
 			<p>AI Researcher | Engineer</p>
 		</header>
 		<main>
+			<section aria-labelledby="publications">
+				<h2 id="publications">Publications & Preprints</h2>
+				{publications.length > 0 ? (
+					<ul>
+						{publications.map(p => (
+							<li>
+								<strong>{p.data.title}</strong>
+								{p.data.authors && (<div class="text-base text-gray-700">{p.data.authors}</div>)}
+								<div class="text-sm text-gray-600">{p.data.preprint ? 'Preprint' : p.data.venue}{p.data.endDate ? ` — ${pubYear(p)}` : ''}</div>
+							</li>
+						))}
+					</ul>
+				) : (
+					<p class="text-gray-600">No publications listed.</p>
+				)}
+			</section>
 			<section aria-labelledby="about">
 				<h2 id="about">About Me</h2>
 				<p>
