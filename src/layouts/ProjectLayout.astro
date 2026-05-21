@@ -13,7 +13,8 @@ const {
   hero_image_alt,
   endDate,
   demo_gif,
-  pdf_url
+  pdf_url,
+  authors
 } = Astro.props as any;
 
 const outdated = endDate ? isProjectOutdated(endDate) : false;
@@ -23,6 +24,8 @@ const imageSrc =  `/${hero_image}`;
 const pdfSrc = pdf_url ? `/${pdf_url}` : null;
 
 const pageTitle = `${title} | Cormac`;
+const authorHighlightSnippets = ["Cormac", "Cureton"];
+const authorsList = authors ? authors.split(",").map((author: string) => author.trim()) : [];
 ---
 <Layout title={pageTitle} />
   <NavBar />
@@ -31,6 +34,21 @@ const pageTitle = `${title} | Cormac`;
       <div class="mb-8 w-full md:whitespace-normal">
         <h1 class="font-[calc(1.75rem+1.5vw)] after:content-[''] after:block after:w-full after:h-2 after:bg-theme-blue after:left-0 after:rounded-lg"> {title} </h1>
       </div>
+      {authors && (
+        <p class="mb-6 text-lg text-gray-600">
+          {authorsList.map((author, index) => {
+            const highlight = authorHighlightSnippets.some(snippet =>
+              author.includes(snippet)
+            );
+
+            return (
+              <>
+                <span class:list={highlight ? "font-semibold text-gray-700" : "text-gray-600"}>{author}</span>{index < authorsList.length - 1 && ", "}
+              </>
+            );
+          })}
+        </p>
+      )}
       {(demo_gif || imageSrc) && (
         <div class={`mb-6 ${pdfSrc ? 'lg:hidden' : ''}`}>
           {demo_gif ? (

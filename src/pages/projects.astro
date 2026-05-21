@@ -9,7 +9,7 @@ import { slugify } from "../lib/utils";
 type ProjectCategory = "publication" | "machine-learning" | "software";
 
 // Temporary local typing (Astro content collection types may not be generated yet)
-interface ProjectData { title:string; tech:string; blurb:string; hero_image?:string; hero_image_alt?:string; endDate:string; hide:boolean; slug?:string; category?:ProjectCategory; preprint?:boolean; venue?:string; }
+interface ProjectData { title:string; tech:string; blurb:string; hero_image?:string; hero_image_alt?:string; endDate:string; hide:boolean; slug?:string; category?:ProjectCategory; preprint?:boolean; venue?:string; authors?:string; }
 interface ProjectEntry { slug:string; body?:string; data: ProjectData; }
 
 const sectionMeta: Record<ProjectCategory, { label: string }> = {
@@ -64,6 +64,7 @@ const projectsByCategory: Record<ProjectCategory, ProjectEntry[]> = {
                           tone: p.data.preprint ? "red" : "blue",
                         }
                       : undefined,
+                    authors: p.data.category === "publication" ? p.data.authors : undefined,
                     description: p.data.blurb,
                     image: p.data.hero_image ? p.data.hero_image : undefined,
                     link: p.data.slug ? p.data.slug : slugify(p.data.title),
